@@ -26,10 +26,14 @@ namespace EMediaSol
         {
             //string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\ptaszek.png";
             string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\png_file.png";
+
+
+
             byte[] inputArray = new PngBitReader().ReadPngFile(inputFilename);
 
-            IHDR_Chunk IHDR_Chunk = new IHDR_Chunk(inputArray);
-
+            //IHDR_Chunk IHDR_Chunk = new IHDR_Chunk(inputArray);
+            //PLTE_Chunk PLTE_Palette = new PLTE_Chunk(inputArray);
+            List<BasicChunkModel> listOfChunks = new Chunk_Finder(inputArray).getData();
         }
 
         private void Form1_Load(object sender, EventArgs e)

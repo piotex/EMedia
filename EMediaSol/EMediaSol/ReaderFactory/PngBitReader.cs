@@ -40,5 +40,59 @@ namespace EMediaSol.ReaderFactory
             string bits = sb.ToString();
             */
         }
+
+        protected int ConvertByteArrayToInt(byte[] tmp)
+        {
+            Array.Reverse(tmp);
+            return BitConverter.ToInt32(tmp, 0);
+        }
+        protected string ConvertByteArrayToString(byte[] tmp)
+        {
+            string result = "";
+            for (int i = 0; i < tmp.Length; i++)
+            {
+                result += (char)((int)tmp[i]);
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>Return next 4 bytes and update index!!! </returns>
+        protected byte getNextByte(ref byte[] tab, ref int index)
+        {
+            return tab[index++];
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>Return next byte and update index!!! </returns>
+        protected byte[] getNextFourBytes(ref byte[] tab, ref int index)
+        {
+            const int count = 4;
+            byte[] tmp = new byte[count];
+            for (int i = 0; i < count; i++)
+            {
+                tmp[i] = tab[index + i];
+            }
+            index += count;
+            return tmp;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>Return next byte and update index!!! </returns>
+        protected byte[] getNextEigthBytes(ref byte[] tab, ref int index)
+        {
+            const int count = 8;
+            byte[] tmp = new byte[count];
+            for (int i = 0; i < count; i++)
+            {
+                tmp[i] = tab[index + i];
+            }
+            index += count;
+            return tmp;
+        }
     }
 }

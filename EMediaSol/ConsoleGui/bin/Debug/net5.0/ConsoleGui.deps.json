@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ConsoleGui/1.0.0": {
+        "dependencies": {
+          "EMediaSol": "1.0.0"
+        },
+        "runtime": {
+          "ConsoleGui.dll": {}
+        }
+      },
+      "EMediaSol/1.0.0": {
+        "runtime": {
+          "EMediaSol.exe": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsoleGui/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EMediaSol/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

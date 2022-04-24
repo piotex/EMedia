@@ -1,0 +1,162 @@
+Count: 11 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\Anonimization.png
+   Name: IHDR
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IEND
+Count: 7 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\ball.png
+   Name: IHDR
+   Name: pHYs
+   Name: vpAg
+   Name: IDAT
+   Name: tEXt
+   Name: tEXt
+   Name: IEND
+Count: 33 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\gora.png
+   Name: IHDR
+   Name: sBIT
+   Name: bKGD
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: tEXt
+   Name: zTXt
+   Name: zTXt
+   Name: IEND
+Count: 8 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\gull.png
+   Name: IHDR
+   Name: pHYs
+   Name: vpAg
+   Name: IDAT
+   Name: IDAT
+   Name: tEXt
+   Name: tEXt
+   Name: IEND
+Count: 4 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\images.png
+   Name: IHDR
+   Name: PLTE
+   Name: IDAT
+   Name: IEND
+Count: 7 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\images1.png
+   Name: IHDR
+   Name: sRGB
+   Name: gAMA
+   Name: pHYs
+   Name: tEXt
+   Name: IDAT
+   Name: IEND
+Count: 16 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\images2.png
+   Name: IHDR
+   Name: gAMA
+   Name: sRGB
+   Name: cHRM
+   Name: bKGD
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: tEXt
+   Name: IEND
+Count: 12 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\images3.png
+   Name: IHDR
+   Name: gAMA
+   Name: cHRM
+   Name: PLTE
+   Name: IDAT
+   Name: tEXt
+   Name: tEXt
+   Name: zTXt
+   Name: zTXt
+   Name: iTXt
+   Name: iTXt
+   Name: IEND
+Count: 5 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\images4.png
+   Name: IHDR
+   Name: gAMA
+   Name: PLTE
+   Name: IDAT
+   Name: IEND
+Count: 7 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\images5.png
+   Name: IHDR
+   Name: gAMA
+   Name: cHRM
+   Name: bKGD
+   Name: IDAT
+   Name: IDAT
+   Name: IEND
+Count: 4 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\images6_PLTE.png
+   Name: IHDR
+   Name: PLTE
+   Name: IDAT
+   Name: IEND
+Count: 9 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\images7_ITXt.png
+   Name: IHDR
+   Name: sRGB
+   Name: iTXt
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: IDAT
+   Name: iTXt
+   Name: IEND
+Count: 7 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\kwiat.png
+   Name: IHDR
+   Name: sRGB
+   Name: gAMA
+   Name: pHYs
+   Name: IDAT
+   Name: IDAT
+   Name: IEND
+Count: 3 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\my.png
+   Name: IHDR
+   Name: IDAT
+   Name: IEND
+Count: 3 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\png_file.png
+   Name: IHDR
+   Name: IDAT
+   Name: IEND
+Count: 3 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\ptaszek.png
+   Name: IHDR
+   Name: IDAT
+   Name: IEND
+Count: 6 File name: C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\unit step.png
+   Name: IHDR
+   Name: sRGB
+   Name: gAMA
+   Name: pHYs
+   Name: IDAT
+   Name: IEND

@@ -37,49 +37,26 @@ namespace EMediaSol.ReaderFactory.Chunks
         }
         public void getData()
         {
-            int index = GetChunkIndex() + ChunkName.Length;
+            int chunkIndex = GetChunkIndex();
+            if (chunkIndex == -1)
+            {
+                throw new Exception("Brak obowiazkowego chunka -> IHDR_Chunk -> getData()");
+            }
+            int index = chunkIndex + ChunkName.Length;
 
-            byte[] tmp = getNextFourBytes(ref index);
+            byte[] tmp = getNextFourBytes(ref tab, ref index);
             Width = ConvertByteArrayToInt(tmp);
 
-            tmp = getNextFourBytes(ref index);
+            tmp = getNextFourBytes(ref tab, ref index);
             Height = ConvertByteArrayToInt(tmp);
 
-            BitDepth = getNextByte(ref index);
-            ColorType = getNextByte(ref index);
-            CompressionMethod = getNextByte(ref index);
-            FilterMethod = getNextByte(ref index);
-            InterlaceMethod = getNextByte(ref index);
+            BitDepth = getNextByte(ref tab, ref index);
+            ColorType = getNextByte(ref tab, ref index);
+            CompressionMethod = getNextByte(ref tab, ref index);
+            FilterMethod = getNextByte(ref tab, ref index);
+            InterlaceMethod = getNextByte(ref tab, ref index);
         }
 
-        protected int ConvertByteArrayToInt(byte[] tmp)
-        {
-            Array.Reverse(tmp);
-            return BitConverter.ToInt32(tmp, 0);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns>Return next 4 bytes and update index!!! </returns>
-        protected byte getNextByte(ref int index)
-        {
-            return tab[index++];
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns>Return next byte and update index!!! </returns>
-        protected byte[] getNextFourBytes(ref int index)
-        {
-            byte[] tmp = new byte[4];
-            for (int i = 0; i < 4; i++)
-            {
-                tmp[i] = tab[index + i];
-            }
-            index += 4;
-            return tmp;
-        }
         protected override string GetChunkName()
         {
             return "IHDR";
