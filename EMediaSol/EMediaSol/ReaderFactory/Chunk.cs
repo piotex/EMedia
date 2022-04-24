@@ -6,25 +6,39 @@ using System.Threading.Tasks;
 
 namespace EMediaSol.ReaderFactory
 {
-    public class Chunk : PngBitReader
+    public abstract class Chunk : PngBitReader
     {
-        private string _path;
+        protected string ChunkName;
+        protected byte[] tab;
+        public Chunk()
+        {
+        }
         public Chunk(string path)
         {
-            _path = path;
+            tab = ReadPngFile(path);
+            ChunkName = GetChunkName();
+        }
+        public Chunk(byte[] _tab)
+        {
+            tab = _tab;
+            ChunkName = GetChunkName();
         }
 
-        public int GetChunkIndex(string chunk)
-        {
-            byte[] tab = ReadPngFile(_path);
+        protected abstract string GetChunkName();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>Returns the index where the chunk name begins !!!</returns>
+        public int GetChunkIndex()
+        {
             for (int i = 0; i < tab.Length; i++)
             {
                 bool isCorrect = true;
-                for (int j = 0; j < chunk.Length; j++)
+                for (int j = 0; j < ChunkName.Length; j++)
                 {
                     int _tab = tab[i + j];
-                    int _chunk = chunk[j];
+                    int _chunk = ChunkName[j];
 
                     if (_tab != _chunk)
                     {

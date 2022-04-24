@@ -1,4 +1,5 @@
 ﻿using EMediaSol.ReaderFactory;
+using EMediaSol.ReaderFactory.Chunks;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,11 +24,12 @@ namespace EMediaSol
 
         private void doSth()
         {
-            //string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\png_file.png";
-            string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\ptaszek.png";
+            //string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\ptaszek.png";
+            string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\png_file.png";
+            byte[] inputArray = new PngBitReader().ReadPngFile(inputFilename);
 
-            //new PngBitReader().doSth();
-            int pos = new Chunk(inputFilename).GetChunkIndex("IHDR");
+            IHDR_Chunk IHDR_Chunk = new IHDR_Chunk(inputArray);
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
