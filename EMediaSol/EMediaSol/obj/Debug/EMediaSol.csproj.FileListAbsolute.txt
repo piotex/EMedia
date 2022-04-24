@@ -1,0 +1,10 @@
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\EMediaSol.exe.config
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\EMediaSol.exe
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\EMediaSol.pdb
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EMediaSol.csproj.AssemblyReference.cache
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EMediaSol.Form1.resources
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EMediaSol.Properties.Resources.resources
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EMediaSol.csproj.GenerateResource.cache
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EMediaSol.csproj.CoreCompileInputs.cache
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EMediaSol.exe
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EMediaSol.pdb
