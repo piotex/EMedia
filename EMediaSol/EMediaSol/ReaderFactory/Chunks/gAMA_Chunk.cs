@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace EMediaSol.ReaderFactory.Chunks
 {
-    public class PLTE_Chunk : Chunk
+    public class gAMA_Chunk : Chunk
     {
-        public PLTE_Chunk(string path)
+        double Gamma;
+        public gAMA_Chunk(string path)
         {
             tab = ReadPngFile(path);
             ChunkName = GetChunkName();
 
             getData();
         }
-        public PLTE_Chunk(byte[] _tab)
+        public gAMA_Chunk(byte[] _tab)
         {
             tab = _tab;
             ChunkName = GetChunkName();
@@ -25,17 +26,14 @@ namespace EMediaSol.ReaderFactory.Chunks
         public void getData()
         {
             int chunkIndex = GetChunkIndex();
-            if (chunkIndex == -1)
-            {
-                throw new Exception(string.Format("Brak obowiazkowego chunka -> {0}_Chunk -> getData()",GetChunkName()));
-            }
-            int index = chunkIndex + ChunkName.Length;
-
+            long index = chunkIndex + ChunkName.Length;
+            byte[] tmp = getNextFourBytes(ref tab, ref index);
+            Gamma = ConvertByteArrayToInt(tmp) * 0.00001;
         }
 
         protected override string GetChunkName()
         {
-            return "PLTE";
+            return "gAMA";
         }
     }
 }

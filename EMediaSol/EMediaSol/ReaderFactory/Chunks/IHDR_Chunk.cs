@@ -10,9 +10,9 @@ namespace EMediaSol.ReaderFactory.Chunks
 {
     public class IHDR_Chunk : Chunk
     {
-        public int Width;
-        public int Height;
-        public int BitDepth;            //giving the number of bits per sample or per palette index (not per pixel).
+        public uint Width;
+        public uint Height;
+        public uint BitDepth;            //giving the number of bits per sample or per palette index (not per pixel).
                                         //Valid values are 1, 2, 4, 8, and 16
         public int ColorType;           //describes the interpretation of the image data.
                                         //Color type codes represent sums of the following values: 1 (palette used), 2 (color used), and 4 (alpha channel used).
@@ -40,9 +40,9 @@ namespace EMediaSol.ReaderFactory.Chunks
             int chunkIndex = GetChunkIndex();
             if (chunkIndex == -1)
             {
-                throw new Exception("Brak obowiazkowego chunka -> IHDR_Chunk -> getData()");
+                return;
             }
-            int index = chunkIndex + ChunkName.Length;
+            long index = chunkIndex + ChunkName.Length;
 
             byte[] tmp = getNextFourBytes(ref tab, ref index);
             Width = ConvertByteArrayToInt(tmp);

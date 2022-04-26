@@ -8,7 +8,7 @@ namespace EMediaSol.ReaderFactory
 {
     public class BasicChunkModel
     {
-        public int Size;
+        public long Size;
         public string Name; 
         public byte[] Data; 
         public string crc;
@@ -32,12 +32,12 @@ namespace EMediaSol.ReaderFactory
         }
         public List<BasicChunkModel> getData()
         {
-            int index = 0;
+            long index = 0;
             checkPngImgIsCorrect(ref index);
             return GetChunk(ref index);
         }
 
-        private List<BasicChunkModel> GetChunk(ref int index)
+        private List<BasicChunkModel> GetChunk(ref long index)
         {
             List<BasicChunkModel> result = new List<BasicChunkModel>();
             BasicChunkModel model = new BasicChunkModel();
@@ -60,7 +60,7 @@ namespace EMediaSol.ReaderFactory
             return result;
         }
 
-        private void checkPngImgIsCorrect(ref int index)
+        private void checkPngImgIsCorrect(ref long index)
         {
             byte[] png_sig = { 137, 80, 78, 71, 13, 10, 26, 10 };
             for (int i = 0; i < png_sig.Length; i++)

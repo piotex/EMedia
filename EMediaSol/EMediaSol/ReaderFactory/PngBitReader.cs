@@ -41,10 +41,15 @@ namespace EMediaSol.ReaderFactory
             */
         }
 
-        protected int ConvertByteArrayToInt(byte[] tmp)
+        protected uint ConvertByteArrayToInt(byte[] tmp)
         {
             Array.Reverse(tmp);
-            return BitConverter.ToInt32(tmp, 0);
+            return BitConverter.ToUInt32(tmp, 0);
+        }
+        protected int ConvertByteArray2ElemToInt(byte[] tmp)
+        {
+            Array.Reverse(tmp);
+            return BitConverter.ToUInt16(tmp, 0);
         }
         protected string ConvertByteArrayToString(byte[] tmp)
         {
@@ -60,7 +65,7 @@ namespace EMediaSol.ReaderFactory
         /// 
         /// </summary>
         /// <returns>Return next 4 bytes and update index!!! </returns>
-        protected byte getNextByte(ref byte[] tab, ref int index)
+        protected byte getNextByte(ref byte[] tab, ref long index)
         {
             return tab[index++];
         }
@@ -68,9 +73,9 @@ namespace EMediaSol.ReaderFactory
         /// 
         /// </summary>
         /// <returns>Return next byte and update index!!! </returns>
-        protected byte[] getNextFourBytes(ref byte[] tab, ref int index)
+        protected byte[] getNextTwoBytes(ref byte[] tab, ref long index)
         {
-            const int count = 4;
+            const int count = 2;
             byte[] tmp = new byte[count];
             for (int i = 0; i < count; i++)
             {
@@ -83,9 +88,9 @@ namespace EMediaSol.ReaderFactory
         /// 
         /// </summary>
         /// <returns>Return next byte and update index!!! </returns>
-        protected byte[] getNextEigthBytes(ref byte[] tab, ref int index)
+        protected byte[] getNextFourBytes(ref byte[] tab, ref long index)
         {
-            const int count = 8;
+            const int count = 4;
             byte[] tmp = new byte[count];
             for (int i = 0; i < count; i++)
             {

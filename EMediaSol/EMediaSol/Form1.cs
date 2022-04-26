@@ -25,15 +25,19 @@ namespace EMediaSol
         private void doSth()
         {
             //string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\ptaszek.png";
-            string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\png_file.png";
+            //string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\png_file.png";   //IHDR
+            //string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\images2.png";      //bKGD
+            string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\gora.png";      //IDAT
 
 
 
             byte[] inputArray = new PngBitReader().ReadPngFile(inputFilename);
 
-            //IHDR_Chunk IHDR_Chunk = new IHDR_Chunk(inputArray);
-            //PLTE_Chunk PLTE_Palette = new PLTE_Chunk(inputArray);
-            List<BasicChunkModel> listOfChunks = new Chunk_Finder(inputArray).getData();
+            IHDR_Chunk IHDR_Chunk = new IHDR_Chunk(inputArray);
+            //bKGD_Chunk bKGD_Chunk = new bKGD_Chunk(inputArray);
+            //cHRM_Chunk cHRM_Chunk = new cHRM_Chunk(inputArray);
+            //gAMA_Chunk gAMA_Chunk = new gAMA_Chunk(inputArray);
+            IDAT_Chunk IDAT_Chunk = new IDAT_Chunk(inputArray);
         }
 
         private void Form1_Load(object sender, EventArgs e)
