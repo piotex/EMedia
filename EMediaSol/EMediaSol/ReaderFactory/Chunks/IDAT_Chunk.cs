@@ -6,26 +6,16 @@ using System.Threading.Tasks;
 
 namespace EMediaSol.ReaderFactory.Chunks
 {
-    public class IDAT_Chunk : Chunk
+    public class IDAT_Chunk : ChunkABS
     {
-        public IDAT_Chunk(string path)
+        public IDAT_Chunk(byte[] _tab) : base(_tab)
         {
-            tab = ReadPngFile(path);
-            ChunkName = GetChunkName();
-
-            getData();
-        }
-        public IDAT_Chunk(byte[] _tab)
-        {
-            tab = _tab;
-            ChunkName = GetChunkName();
-
             getData();
         }
         public void getData()
         {
-            List<BasicChunkModel> result = new List<BasicChunkModel>();
-            BasicChunkModel model;
+            List<Chunk> result = new List<Chunk>();
+            Chunk model;
 
             long index = 0;
             while (index != -1)
@@ -34,7 +24,7 @@ namespace EMediaSol.ReaderFactory.Chunks
                 if (index == -1)
                     break;
 
-                model = new BasicChunkModel();
+                model = new Chunk();
                 index -= 4;                                        //cofam sie 4 byte-y -> zeby pobrac size
                 byte[] tmp = getNextFourBytes(ref tab, ref index);
                 model.Size = ConvertByteArrayToInt(tmp);
@@ -51,11 +41,9 @@ namespace EMediaSol.ReaderFactory.Chunks
                 model.Data = body;
 
                 tmp = getNextFourBytes(ref tab, ref index);
-                model.crc = ConvertByteArrayToString(tmp);
+                model.CRC = ConvertByteArrayToString(tmp);
                 result.Add(model);
             }
-
-
         }
 
         protected override string GetChunkName()

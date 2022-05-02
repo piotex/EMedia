@@ -6,26 +6,16 @@ using System.Threading.Tasks;
 
 namespace EMediaSol.ReaderFactory.Chunks
 {
-    public class _Chunk : Chunk
+    public class _Chunk : ChunkABS
     {
-        public _Chunk(string path)
+        public _Chunk(byte[] _tab) : base(_tab)
         {
-            tab = ReadPngFile(path);
-            ChunkName = GetChunkName();
-
-            getData();
-        }
-        public _Chunk(byte[] _tab)
-        {
-            tab = _tab;
-            ChunkName = GetChunkName();
-
             getData();
         }
         public void getData()
         {
             int chunkIndex = GetChunkIndex();
-            long index = chunkIndex + ChunkName.Length;
+            long index = chunkIndex + Name.Length;
 
         }
 

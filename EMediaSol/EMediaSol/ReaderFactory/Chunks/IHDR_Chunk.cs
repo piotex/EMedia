@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EMediaSol.ReaderFactory.Chunks
 {
-    public class IHDR_Chunk : Chunk
+    public class IHDR_Chunk : ChunkABS
     {
         public uint Width;
         public uint Height;
@@ -21,18 +21,8 @@ namespace EMediaSol.ReaderFactory.Chunks
         public int FilterMethod;        //indicates the preprocessing method applied to the image data before compression. At present, only filter method 0 
         public int InterlaceMethod;     //indicates the transmission order of the image data. Two values are currently defined: 0 (no interlace) or 1 (Adam7 interlace).
 
-        public IHDR_Chunk(string path)
+        public IHDR_Chunk(byte[] _tab) : base(_tab)
         {
-            tab = ReadPngFile(path);
-            ChunkName = GetChunkName();
-
-            getData();
-        }
-        public IHDR_Chunk(byte[] _tab)
-        {
-            tab = _tab;
-            ChunkName = GetChunkName();
-
             getData();
         }
         public void getData()
@@ -42,7 +32,7 @@ namespace EMediaSol.ReaderFactory.Chunks
             {
                 return;
             }
-            long index = chunkIndex + ChunkName.Length;
+            long index = chunkIndex + Name.Length;
 
             byte[] tmp = getNextFourBytes(ref tab, ref index);
             Width = ConvertByteArrayToInt(tmp);

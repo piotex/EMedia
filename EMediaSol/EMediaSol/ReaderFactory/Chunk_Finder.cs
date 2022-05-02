@@ -6,46 +6,38 @@ using System.Threading.Tasks;
 
 namespace EMediaSol.ReaderFactory
 {
-    public class BasicChunkModel
+    public class Chunk_Finder : PngBitReader
     {
-        public long Size;
-        public string Name; 
-        public byte[] Data; 
-        public string crc;
-    }
+        protected byte[] tab;
 
-    public class Chunk_Finder : Chunk
-    {
         public Chunk_Finder(string path)
         {
             tab = ReadPngFile(path);
-            ChunkName = GetChunkName();
 
             getData();
         }
         public Chunk_Finder(byte[] _tab)
         {
             tab = _tab;
-            ChunkName = GetChunkName();
 
             getData();
         }
-        public List<BasicChunkModel> getData()
+        public List<Chunk> getData()
         {
             long index = 0;
             checkPngImgIsCorrect(ref index);
             return GetChunk(ref index);
         }
 
-        private List<BasicChunkModel> GetChunk(ref long index)
+        private List<Chunk> GetChunk(ref long index)
         {
-            List<BasicChunkModel> result = new List<BasicChunkModel>();
-            BasicChunkModel model = new BasicChunkModel();
+            List<Chunk> result = new List<Chunk>();
+            Chunk model = new Chunk();
 
             string endChunk = "IEND";
             while (model.Name != endChunk)
             {
-                model = new BasicChunkModel();
+                model = new Chunk();
                 byte[] tmp = getNextFourBytes(ref tab, ref index);
                 model.Size = ConvertByteArrayToInt(tmp);
                 tmp = getNextFourBytes(ref tab, ref index);
@@ -54,7 +46,7 @@ namespace EMediaSol.ReaderFactory
                 index += model.Size;                                //pominiecie danych w chunku
 
                 tmp = getNextFourBytes(ref tab, ref index);
-                model.crc = ConvertByteArrayToString(tmp);
+                model.CRC = ConvertByteArrayToString(tmp);
                 result.Add(model);
             }
             return result;
@@ -71,12 +63,6 @@ namespace EMediaSol.ReaderFactory
                 }
             }
             index += png_sig.Length;
-        }
-
-        protected override string GetChunkName()
-        {
-            //throw new NotImplementedException();
-            return "";
         }
     }
 }

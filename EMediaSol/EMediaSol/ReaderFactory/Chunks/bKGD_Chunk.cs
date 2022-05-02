@@ -9,7 +9,7 @@ namespace EMediaSol.ReaderFactory.Chunks
     /// <summary>
     /// The bKGD chunk specifies a default background color to present the image against.
     /// </summary>
-    public class bKGD_Chunk : Chunk
+    public class bKGD_Chunk : ChunkABS
     {
         public int PaletteIndex;
         public int Gray;
@@ -17,18 +17,8 @@ namespace EMediaSol.ReaderFactory.Chunks
         public int Green;
         public int Blue;
 
-        public bKGD_Chunk(string path)
+        public bKGD_Chunk(byte[] _tab) : base(_tab)
         {
-            tab = ReadPngFile(path);
-            ChunkName = GetChunkName();
-
-            getData();
-        }
-        public bKGD_Chunk(byte[] _tab)
-        {
-            tab = _tab;
-            ChunkName = GetChunkName();
-
             getData();
         }
         public void getData()
@@ -37,7 +27,7 @@ namespace EMediaSol.ReaderFactory.Chunks
             int ColorType = iHDR.ColorType;
 
             int chunkIndex = GetChunkIndex();
-            long index = chunkIndex + ChunkName.Length;
+            long index = chunkIndex + Name.Length;
 
             if (ColorType == 3)
             {

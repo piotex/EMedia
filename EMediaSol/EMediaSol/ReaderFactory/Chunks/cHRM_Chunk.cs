@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EMediaSol.ReaderFactory.Chunks
 {
-    public class cHRM_Chunk : Chunk
+    public class cHRM_Chunk : ChunkABS
     {
         double WhitePointX;
         double WhitePointY;
@@ -15,27 +15,17 @@ namespace EMediaSol.ReaderFactory.Chunks
         double GreenX;  
         double GreenY;  
         double BlueX; 
-        double BlueY;  
+        double BlueY;
 
-        public cHRM_Chunk(string path)
+        public cHRM_Chunk(byte[] _tab) : base(_tab)
         {
-            tab = ReadPngFile(path);
-            ChunkName = GetChunkName();
-
-            getData();
-        }
-        public cHRM_Chunk(byte[] _tab)
-        {
-            tab = _tab;
-            ChunkName = GetChunkName();
-
             getData();
         }
         public void getData()
         {
             double prescalet = 0.00001;
             int chunkIndex = GetChunkIndex();
-            long index = chunkIndex + ChunkName.Length;
+            long index = chunkIndex + Name.Length;
 
             byte[] tmp = getNextTwoBytes(ref tab, ref index);
             WhitePointX = ConvertByteArray2ElemToInt(tmp) * prescalet;

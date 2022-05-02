@@ -6,27 +6,17 @@ using System.Threading.Tasks;
 
 namespace EMediaSol.ReaderFactory.Chunks
 {
-    public class gAMA_Chunk : Chunk
+    public class gAMA_Chunk : ChunkABS
     {
         double Gamma;
-        public gAMA_Chunk(string path)
+        public gAMA_Chunk(byte[] _tab) : base(_tab)
         {
-            tab = ReadPngFile(path);
-            ChunkName = GetChunkName();
-
-            getData();
-        }
-        public gAMA_Chunk(byte[] _tab)
-        {
-            tab = _tab;
-            ChunkName = GetChunkName();
-
             getData();
         }
         public void getData()
         {
             int chunkIndex = GetChunkIndex();
-            long index = chunkIndex + ChunkName.Length;
+            long index = chunkIndex + Name.Length;
             byte[] tmp = getNextFourBytes(ref tab, ref index);
             Gamma = ConvertByteArrayToInt(tmp) * 0.00001;
         }

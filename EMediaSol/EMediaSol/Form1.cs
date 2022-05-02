@@ -33,11 +33,16 @@ namespace EMediaSol
 
             byte[] inputArray = new PngBitReader().ReadPngFile(inputFilename);
 
-            IHDR_Chunk IHDR_Chunk = new IHDR_Chunk(inputArray);
+            //IHDR_Chunk IHDR_Chunk = new IHDR_Chunk(inputArray);
             //bKGD_Chunk bKGD_Chunk = new bKGD_Chunk(inputArray);
             //cHRM_Chunk cHRM_Chunk = new cHRM_Chunk(inputArray);
             //gAMA_Chunk gAMA_Chunk = new gAMA_Chunk(inputArray);
-            IDAT_Chunk IDAT_Chunk = new IDAT_Chunk(inputArray);
+            //IDAT_Chunk IDAT_Chunk = new IDAT_Chunk(inputArray);
+            IEND_Chunk IEND_Chunk = new IEND_Chunk(inputArray);
+
+
+
+            //not done - peter to do!!
         }
 
         private void Form1_Load(object sender, EventArgs e)

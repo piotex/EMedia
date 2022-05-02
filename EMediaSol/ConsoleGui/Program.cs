@@ -35,12 +35,12 @@ namespace ConsoleGui
 
             //IHDR_Chunk IHDR_Chunk = new IHDR_Chunk(inputArray);
             //PLTE_Chunk PLTE_Palette = new PLTE_Chunk(inputArray);
-            List<BasicChunkModel> listOfChunks = new Chunk_Finder(inputArray).getData();
+            List<Chunk> listOfChunks = new Chunk_Finder(inputArray).getData();
             foreach (var item in listOfChunks)
             {
                 Console.WriteLine("Name: " + item.Name);
                 Console.WriteLine("Size: " + item.Size);
-                Console.WriteLine("Crc:  " + item.crc);
+                Console.WriteLine("Crc:  " + item.CRC);
                 Console.WriteLine("------------------");
             }
         }
@@ -54,7 +54,7 @@ namespace ConsoleGui
             {
                 byte[] inputArray = new PngBitReader().ReadPngFile(inputFilename);
 
-                List<BasicChunkModel> listOfChunks = new Chunk_Finder(inputArray).getData();
+                List<Chunk> listOfChunks = new Chunk_Finder(inputArray).getData();
                 sw.WriteLine("Count: " + listOfChunks.Count + " File name: " + inputFilename);
                 foreach (var item in listOfChunks)
                 {
@@ -66,7 +66,7 @@ namespace ConsoleGui
         {
             byte[] inputArray = new PngBitReader().ReadPngFile(inputFilename);
 
-            List<BasicChunkModel> listOfChunks = new Chunk_Finder(inputArray).getData();
+            List<Chunk> listOfChunks = new Chunk_Finder(inputArray).getData();
             Console.WriteLine("Count: " + listOfChunks.Count + " File name: " + inputFilename);
             foreach (var item in listOfChunks)
             {
@@ -77,7 +77,7 @@ namespace ConsoleGui
         {
             byte[] inputArray = new PngBitReader().ReadPngFile(inputFilename);
 
-            List<BasicChunkModel> listOfChunks = new Chunk_Finder(inputArray).getData();
+            List<Chunk> listOfChunks = new Chunk_Finder(inputArray).getData();
             Console.WriteLine("Count: " + listOfChunks.Count + " File name: " + inputFilename);
         }
     }
