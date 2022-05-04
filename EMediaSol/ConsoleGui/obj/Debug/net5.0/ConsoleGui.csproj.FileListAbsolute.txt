@@ -18,3 +18,8 @@ C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\obj\Debug\n
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\obj\Debug\net5.0\ref\ConsoleGui.dll
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\obj\Debug\net5.0\ConsoleGui.pdb
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\obj\Debug\net5.0\ConsoleGui.genruntimeconfig.cache
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\net5.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\net5.0\System.Drawing.Common.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll

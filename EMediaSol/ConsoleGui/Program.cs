@@ -9,6 +9,14 @@ namespace ConsoleGui
     {
         static void Main(string[] args)
         {
+            /*
+            string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\images6_PLTE.png";
+            byte[] inputArray = new PngBitReader().ReadPngFile(inputFilename);
+
+            var tmmm = new PLTE_Chunk(inputArray);
+            */
+
+
             string fileToAppend = @"\ChunksInFiles.txt";
             string mainPath = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia";
             DirectoryInfo d = new DirectoryInfo(mainPath); //Assuming Test is your Folder

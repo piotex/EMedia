@@ -34,6 +34,8 @@ namespace EMediaSol.ReaderFactory.Chunks
                     break;
 
                 model = new Chunk();
+                model.ChunkExist = true;
+
                 index -= 4;                                        //cofam sie 4 byte-y -> zeby pobrac size
                 byte[] tmp = getNextFourBytes(ref tab, ref index);
                 model.Size = ConvertByteArrayToInt(tmp);

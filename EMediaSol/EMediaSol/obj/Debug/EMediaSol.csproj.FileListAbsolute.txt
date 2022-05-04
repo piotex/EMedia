@@ -8,3 +8,8 @@ C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EM
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EMediaSol.csproj.CoreCompileInputs.cache
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EMediaSol.exe
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EMediaSol.pdb
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\System.Drawing.Common.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EMediaSol.csproj.CopyComplete
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\ICSharpCode.SharpZipLib.xml
