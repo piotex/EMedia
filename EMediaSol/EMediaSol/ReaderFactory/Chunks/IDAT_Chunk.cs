@@ -8,13 +8,22 @@ namespace EMediaSol.ReaderFactory.Chunks
 {
     public class IDAT_Chunk : ChunkABS
     {
-        public IDAT_Chunk(byte[] _tab) : base(_tab)
+        public List<Chunk> ListOfIdatChuks;
+        public IDAT_Chunk(byte[] _tab) //: base(_tab)
         {
-            getData();
+            tab = _tab;
+            Name = GetChunkName();
+
+            long index = GetChunkIndex();
+            ChunkExist = index != -1;
+            if (ChunkExist)
+            {
+                getData();
+            }
         }
-        public void getData()
+        protected override void getData()
         {
-            List<Chunk> result = new List<Chunk>();
+            ListOfIdatChuks = new List<Chunk>();
             Chunk model;
 
             long index = 0;
@@ -42,7 +51,7 @@ namespace EMediaSol.ReaderFactory.Chunks
 
                 tmp = getNextFourBytes(ref tab, ref index);
                 model.CRC = ConvertByteArrayToString(tmp);
-                result.Add(model);
+                ListOfIdatChuks.Add(model);
             }
         }
 

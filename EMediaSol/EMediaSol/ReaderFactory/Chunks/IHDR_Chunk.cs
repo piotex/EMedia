@@ -23,28 +23,22 @@ namespace EMediaSol.ReaderFactory.Chunks
 
         public IHDR_Chunk(byte[] _tab) : base(_tab)
         {
-            getData();
         }
-        public void getData()
+        protected override void getData()
         {
-            int chunkIndex = GetChunkIndex();
-            if (chunkIndex == -1)
-            {
-                return;
-            }
-            long index = chunkIndex + Name.Length;
+            long index = 0;
 
-            byte[] tmp = getNextFourBytes(ref tab, ref index);
+            byte[] tmp = getNextFourBytes(ref Data, ref index);
             Width = ConvertByteArrayToInt(tmp);
 
-            tmp = getNextFourBytes(ref tab, ref index);
+            tmp = getNextFourBytes(ref Data, ref index);
             Height = ConvertByteArrayToInt(tmp);
 
-            BitDepth = getNextByte(ref tab, ref index);
-            ColorType = getNextByte(ref tab, ref index);
-            CompressionMethod = getNextByte(ref tab, ref index);
-            FilterMethod = getNextByte(ref tab, ref index);
-            InterlaceMethod = getNextByte(ref tab, ref index);
+            BitDepth = getNextByte(ref Data, ref index);
+            ColorType = getNextByte(ref Data, ref index);
+            CompressionMethod = getNextByte(ref Data, ref index);
+            FilterMethod = getNextByte(ref Data, ref index);
+            InterlaceMethod = getNextByte(ref Data, ref index);
         }
 
         protected override string GetChunkName()

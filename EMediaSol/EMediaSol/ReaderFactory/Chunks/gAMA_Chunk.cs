@@ -8,16 +8,14 @@ namespace EMediaSol.ReaderFactory.Chunks
 {
     public class gAMA_Chunk : ChunkABS
     {
-        double Gamma;
+        public double Gamma;
         public gAMA_Chunk(byte[] _tab) : base(_tab)
         {
-            getData();
         }
-        public void getData()
+        protected override void getData()
         {
-            int chunkIndex = GetChunkIndex();
-            long index = chunkIndex + Name.Length;
-            byte[] tmp = getNextFourBytes(ref tab, ref index);
+            long index = 0;
+            byte[] tmp = getNextFourBytes(ref Data, ref index);
             Gamma = ConvertByteArrayToInt(tmp) * 0.00001;
         }
 

@@ -19,35 +19,34 @@ namespace EMediaSol.ReaderFactory.Chunks
 
         public bKGD_Chunk(byte[] _tab) : base(_tab)
         {
-            getData();
         }
-        public void getData()
+        protected override void getData()
         {
             IHDR_Chunk iHDR = new IHDR_Chunk(tab);
             int ColorType = iHDR.ColorType;
 
-            int chunkIndex = GetChunkIndex();
-            long index = chunkIndex + Name.Length;
+            long index = 0;
 
             if (ColorType == 3)
             {
-                PaletteIndex = getNextByte(ref tab, ref index);
+                PaletteIndex = getNextByte(ref Data, ref index);
             }
             if (ColorType == 0 || ColorType == 4)
             {
-                byte[] tmp = getNextTwoBytes(ref tab, ref index);
+                byte[] tmp = getNextTwoBytes(ref Data, ref index);
                 Gray = ConvertByteArray2ElemToInt(tmp);
             }
             if (ColorType == 2 || ColorType == 6)
             {
-                byte[] tmp = getNextTwoBytes(ref tab, ref index);
+                byte[] tmp = getNextTwoBytes(ref Data, ref index);
                 Red = ConvertByteArray2ElemToInt(tmp); 
-                tmp = getNextTwoBytes(ref tab, ref index);
+                tmp = getNextTwoBytes(ref Data, ref index);
                 Green = ConvertByteArray2ElemToInt(tmp);
-                tmp = getNextTwoBytes(ref tab, ref index);
+                tmp = getNextTwoBytes(ref Data, ref index);
                 Blue = ConvertByteArray2ElemToInt(tmp);
             }
         }
+
 
         protected override string GetChunkName()
         {

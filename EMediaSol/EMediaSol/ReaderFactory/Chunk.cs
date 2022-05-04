@@ -12,6 +12,7 @@ namespace EMediaSol.ReaderFactory
         public long Size;
         public byte[] Data;
         public string CRC;
+        public bool ChunkExist;
 
         /// <summary>
         /// temporary table for storing file bytes

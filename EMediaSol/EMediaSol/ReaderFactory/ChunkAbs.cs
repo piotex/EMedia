@@ -11,19 +11,52 @@ namespace EMediaSol.ReaderFactory
         public ChunkABS()
         {
         }
-        public ChunkABS(string path)
-        {
-            tab = ReadPngFile(path);
-            Name = GetChunkName();
-        }
         public ChunkABS(byte[] _tab)
         {
             tab = _tab;
             Name = GetChunkName();
+
+            SetNameDataAndCRC();
+            if (ChunkExist)
+            {
+                getData();
+            }
         }
 
         protected abstract string GetChunkName();
+        protected abstract void getData();
 
+        /// <summary>
+        /// Metkod to set defoult parameters
+        /// </summary>
+        /// <param name="index"></param>
+        protected void SetNameDataAndCRC()
+        {
+            long index = GetChunkIndex();
+
+            ChunkExist = index != -1;
+            if (!ChunkExist)
+            {
+                return;
+            }
+
+            index -= 4;                                                 //cofam sie 4 byte-y -> zeby pobrac size
+            byte[] tmp = getNextFourBytes(ref tab, ref index);
+            Size = ConvertByteArrayToInt(tmp);
+            tmp = getNextFourBytes(ref tab, ref index);
+            Name = ConvertByteArrayToString(tmp);
+
+            Data = new byte[Size];
+            for (int i = 0; i < Size; i++)
+            {
+                Data[i] = tab[i + index];
+            }
+
+            index += Size;
+
+            tmp = getNextFourBytes(ref tab, ref index);
+            CRC = ConvertByteArrayToString(tmp);
+        }
         /// <summary>
         /// 
         /// </summary>

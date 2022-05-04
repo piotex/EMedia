@@ -10,9 +10,8 @@ namespace EMediaSol.ReaderFactory.Chunks
     {
         public _Chunk(byte[] _tab) : base(_tab)
         {
-            getData();
         }
-        public void getData()
+        protected override void getData()
         {
             int chunkIndex = GetChunkIndex();
             long index = chunkIndex + Name.Length;
