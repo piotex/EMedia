@@ -80,20 +80,16 @@ namespace EMediaSol.ReaderFactory.Chunks
                 model.Keyword = keyword;
                 model.CompressedText = text;
 
-                var tmp99 = SharpZipLibDecompress(tmp_arr);
-                //model.DecompressedText = Unzip(tmp_arr);
-
+                model.DecompressedText = SharpZipLibDecompress(tmp_arr);
 
                 tmp = getNextFourBytes(ref tab, ref index);
                 model.CRC = ConvertByteArrayToString(tmp);
-
-
 
                 ListOfTEXtChuks.Add(model);
             }
         }
 
-        public static string SharpZipLibDecompress(byte[] data)
+        protected string SharpZipLibDecompress(byte[] data)
         {
             MemoryStream compressed = new MemoryStream(data);
             MemoryStream decompressed = new MemoryStream();
@@ -111,115 +107,7 @@ namespace EMediaSol.ReaderFactory.Chunks
 
             //return decompressed.ToArray();
         }
-        /*
-
-        public static byte[] ZLibDotnetDecompress(byte[] data, int size)
-        {
-            MemoryStream compressed = new MemoryStream(data);
-            ZInputStream inputStream = new ZInputStream(compressed);
-            byte[] result = new byte[size];   //  Since zinputstream inherits binaryreader instead of stream, it can only prepare the output buffer in advance and use read to obtain fixed length data.
-            inputStream.read(result, 0, result.Length); //  Note that the initial of read here is lowercase
-            return result;
-        }
-
-        */
-        public static string MicrosoftDecompress(byte[] data)
-        {
-            MemoryStream compressed = new MemoryStream(data);
-            MemoryStream decompressed = new MemoryStream();
-            DeflateStream deflateStream = new DeflateStream(compressed, CompressionMode.Decompress); //  Note: the first parameter here is also to fill in compressed data, but this time it is used as input data
-            deflateStream.CopyTo(decompressed);
-            byte[] result = decompressed.ToArray();
-
-            string text = "";
-            foreach (var item in result)
-            {
-                text += (char)((int)item);
-            }
-            return text;
-
-            //return result;
-        }
-
-
-
-
-
-
-
-
-
-
-
-        private static string UnGZipxx(byte[] Dado)
-        {
-            MemoryStream outputMemStream = new MemoryStream(Dado);
-            MemoryStream PlainStream = new MemoryStream();
-            using (GZipStream zipInput = new GZipStream(outputMemStream, CompressionMode.Decompress, true))
-            {
-
-                byte[] buf = new byte[16384];
-                int l = -1;
-                while ((l = zipInput.Read(buf, 0, buf.Length)) != 0)
-                    PlainStream.Write(buf, 0, l);
-
-                return Encoding.ASCII.GetString(PlainStream.ToArray());
-            }
-        }
-
-        public void Decompresss(byte[] input)
-        {
-            //ICSharpCode.SharpZipLib.
-
-        }
-
-        public static void CopyTo(Stream src, Stream dest)
-        {
-            byte[] bytes = new byte[4096];
-
-            int cnt;
-
-            while ((cnt = src.Read(bytes, 0, bytes.Length)) != 0)
-            {
-                dest.Write(bytes, 0, cnt);
-            }
-        }
-        public static string Unzip(byte[] bytes)
-        {
-            using (var msi = new MemoryStream(bytes))
-            using (var mso = new MemoryStream())
-            {
-                using (var gs = new GZipStream(msi, CompressionMode.Decompress))
-                {
-                    //gs.CopyTo(mso);
-                    CopyTo(gs, mso);
-                }
-
-                return Encoding.UTF8.GetString(mso.ToArray());
-            }
-        }
-        public string Decompress(byte[] data)
-        {
-            using (var compressedStream = new MemoryStream(data))
-            {
-                using (var zipStream = new GZipStream(compressedStream, CompressionMode.Decompress))
-                {
-                    using (var resultStream = new MemoryStream())
-                    {
-                        zipStream.CopyTo(resultStream);
-                        var tmp = resultStream.ToArray();
-
-                        string text = "";
-                        foreach (var item in tmp)
-                        {
-                            text += (char)((int)item);
-                        }
-                        return text;
-                    }
-                }
-            }
-        }
-
+        
         protected override string GetChunkName()
         {
             return "zTXt";

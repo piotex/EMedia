@@ -216,10 +216,27 @@ namespace ChunkTests
 
             zTXt_Chunk zTXt_Chunk = new zTXt_Chunk(inputArray);
             Assert.True(zTXt_Chunk.ChunkExist);
-            Assert.AreEqual(zTXt_Chunk.Size, 1);
-            Assert.AreEqual(zTXt_Chunk.Name, "tEXt");
-            Assert.AreEqual(zTXt_Chunk.CRC, "®Î\u001cé");
+            Assert.True(zTXt_Chunk.ListOfTEXtChuks[0].ChunkExist);
+            Assert.AreEqual(zTXt_Chunk.ListOfTEXtChuks[0].DecompressedText, "Papuga");
+            Assert.AreEqual(zTXt_Chunk.ListOfTEXtChuks[0].Keyword, "Description");
             Assert.Pass();
+        }
+        [Test]
+        public void iEXt_Chunk_Test()
+        {
+            string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\images3.png";
+
+            byte[] inputArray = new PngBitReader().ReadPngFile(inputFilename);
+
+            iTXt_Chunk iTXt_Chunk = new iTXt_Chunk(inputArray);
+            Assert.True(iTXt_Chunk.ChunkExist);
+            
+            Assert.True(iTXt_Chunk.ListOfITXtChuks[0].ChunkExist);
+            Assert.AreEqual(iTXt_Chunk.ListOfITXtChuks[0].Keyword, "Title");
+            Assert.AreEqual(iTXt_Chunk.ListOfITXtChuks[0].Text, "Kolorowa papuga");
+            Assert.AreEqual(iTXt_Chunk.ListOfITXtChuks[0].Size, 25);
+            Assert.Pass();
+            
         }
 
     }
