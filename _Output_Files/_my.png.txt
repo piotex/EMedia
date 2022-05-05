@@ -1,0 +1,74 @@
+
+
+
+------- IHDR Chunk -------
+Name             : IHDR
+Size             : 13
+CRC              : Jk
+
+Width            : 640
+Height           : 160
+BitDepth         : 8
+ColorType        : 2
+CompressionMethod: 0
+FilterMethod     : 0
+InterlaceMethod  : 0
+
+
+
+------- PLTE Chunk -------
+Chunk does not exist.
+
+
+
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 1299
+CRC       : xí×
+
+
+
+------- IEND Chunk -------
+Name      : IEND
+Size      : 0
+CRC       : ®B`
+
+
+
+------- cHRM Chunk -------
+Chunk does not exist.
+
+
+
+------- gAMA Chunk -------
+Chunk does not exist.
+
+
+
+------- sBIT Chunk -------
+Chunk does not exist.
+
+
+
+------- sRGB Chunk -------
+Chunk does not exist.
+
+
+
+------- bKGD Chunk -------
+Chunk does not exist.
+
+
+
+------- pHYs Chunk -------
+Chunk does not exist.
+
+------- iTXt Chunk -------
+Chunk does not exist.
+
+------- tEXt Chunk -------
+Chunk does not exist.
+
+------- iTXt Chunk -------
+Chunk does not exist.

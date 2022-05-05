@@ -4,8 +4,11 @@ using EMediaSol.ReaderFactory.Chunks;
 
 namespace ChunkTests
 {
-    public class Tests
+    public class Chunks_Tests
     {
+        //do liczenia crc
+        //https://www-libpng-org.translate.goog/pub/png/spec/1.2/PNG-CRCAppendix.html?_x_tr_sl=en&_x_tr_tl=pl&_x_tr_hl=pl&_x_tr_pto=wapp&_x_tr_sch=http
+
         [SetUp]
         public void Setup()
         {

@@ -8,9 +8,9 @@ namespace EMediaSol.ReaderFactory
 {
     public class zTXt_Model : Chunk
     {
-        public string Keyword = "";
-        public int CompressionMethod = -1;
-        public string CompressedText = "";
-        public string DecompressedText = "";
+        public string Keyword           = "";
+        public int    CompressionMethod = -1;
+        public string CompressedText    = "";
+        public string DecompressedText  = "";
     }
 }

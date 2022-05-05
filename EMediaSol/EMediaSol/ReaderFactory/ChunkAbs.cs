@@ -25,6 +25,7 @@ namespace EMediaSol.ReaderFactory
 
         protected abstract string GetChunkName();
         protected abstract void getData();
+        public abstract void PlotChunk(string path);
 
         /// <summary>
         /// Metkod to set defoult parameters

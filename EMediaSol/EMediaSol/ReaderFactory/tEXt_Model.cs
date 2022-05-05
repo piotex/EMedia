@@ -9,6 +9,6 @@ namespace EMediaSol.ReaderFactory
     public class tEXt_Model : Chunk
     {
         public string Keyword = "";
-        public string Text = "";
+        public string Text    = "";
     }
 }

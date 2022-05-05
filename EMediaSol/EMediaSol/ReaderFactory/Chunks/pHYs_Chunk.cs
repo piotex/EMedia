@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace EMediaSol.ReaderFactory.Chunks
     {
         public long PixelPerUnitX = 0;
         public long PixelPerUnitY = 0;
-        public int UnitSoecifier = 0;
+        public int  UnitSoecifier = 0;
 
         public pHYs_Chunk(byte[] _tab) : base(_tab)
         {
@@ -29,6 +30,39 @@ namespace EMediaSol.ReaderFactory.Chunks
         protected override string GetChunkName()
         {
             return "pHYs";
+        }
+        public override void PlotChunk(string path)
+        {
+            if (!File.Exists(path))
+            {
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.Write("");
+                }
+            }
+            using (StreamWriter sw = File.AppendText(path))
+            {
+                sw.WriteLine("");
+                sw.WriteLine("");
+                sw.WriteLine("");
+                sw.WriteLine("------- pHYs Chunk -------");
+                if (ChunkExist)
+                {
+                    sw.WriteLine("Name      : " + Name);
+                    sw.WriteLine("Size      : " + Size);
+                    sw.WriteLine("Data      : " + Data);
+                    sw.WriteLine("CRC       : " + CRC);
+                    sw.WriteLine("ChunkExist: " + ChunkExist);
+                    sw.WriteLine("");
+                    sw.WriteLine("PixelPerUnitX: " + PixelPerUnitX);
+                    sw.WriteLine("PixelPerUnitY: " + PixelPerUnitY);
+                    sw.WriteLine("UnitSoecifier: " + UnitSoecifier);
+                }
+                else
+                {
+                    sw.WriteLine("Chunk does not exist.");
+                }
+            }
         }
     }
 }

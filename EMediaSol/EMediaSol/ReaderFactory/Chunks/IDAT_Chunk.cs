@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,6 +61,40 @@ namespace EMediaSol.ReaderFactory.Chunks
         protected override string GetChunkName()
         {
             return "IDAT";
+        }
+        public override void PlotChunk(string path)
+        {
+            if (!File.Exists(path))
+            {
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.Write("");
+                }
+            }
+            using (StreamWriter sw = File.AppendText(path))
+            {
+                if (ChunkExist)
+                {
+                    sw.WriteLine("");
+                    sw.WriteLine("");
+                    sw.WriteLine("");
+
+                    foreach (var item in ListOfIdatChuks)
+                    {
+                        sw.WriteLine("");
+                        sw.WriteLine("------- IDAT Chunk -------");
+                        sw.WriteLine("Name      : " + item.Name);
+                        sw.WriteLine("Size      : " + item.Size);
+                        sw.WriteLine("CRC       : " + item.CRC);
+                    }
+                }
+                else
+                {
+                    sw.WriteLine("");
+                    sw.WriteLine("------- IDAT Chunk -------");
+                    sw.WriteLine("Chunk does not exist.");
+                }
+            }
         }
     }
 }

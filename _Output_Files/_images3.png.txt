@@ -1,0 +1,409 @@
+
+
+
+------- IHDR Chunk -------
+Name             : IHDR
+Size             : 13
+CRC              : =[èW
+
+Width            : 150
+Height           : 200
+BitDepth         : 8
+ColorType        : 3
+CompressionMethod: 0
+FilterMethod     : 0
+InterlaceMethod  : 0
+
+
+
+------- PLTE Chunk -------
+Name      : PLTE
+Size      : 768
+CRC       : çô(
+
+RGB Palet List: 
+ R : 0 G : 0 B : 0
+ R : 255 G : 255 B : 255
+ R : 0 G : 0 B : 1
+ R : 80 G : 21 B : 24
+ R : 193 G : 84 B : 91
+ R : 239 G : 209 B : 211
+ R : 216 G : 8 B : 24
+ R : 200 G : 8 B : 24
+ R : 184 G : 8 B : 24
+ R : 232 G : 24 B : 40
+ R : 211 G : 24 B : 40
+ R : 248 G : 40 B : 56
+ R : 228 G : 40 B : 56
+ R : 245 G : 56 B : 72
+ R : 168 G : 8 B : 24
+ R : 152 G : 8 B : 24
+ R : 179 G : 24 B : 40
+ R : 232 G : 80 B : 96
+ R : 207 G : 170 B : 174
+ R : 136 G : 8 B : 24
+ R : 120 G : 8 B : 24
+ R : 143 G : 24 B : 41
+ R : 104 G : 8 B : 24
+ R : 171 G : 85 B : 104
+ R : 113 G : 24 B : 47
+ R : 218 G : 184 B : 193
+ R : 127 G : 52 B : 75
+ R : 56 G : 8 B : 24
+ R : 77 G : 24 B : 42
+ R : 142 G : 86 B : 108
+ R : 246 G : 233 B : 239
+ R : 40 G : 8 B : 24
+ R : 49 G : 24 B : 40
+ R : 84 G : 53 B : 75
+ R : 148 G : 117 B : 139
+ R : 239 G : 215 B : 233
+ R : 172 G : 159 B : 169
+ R : 212 G : 203 B : 210
+ R : 109 G : 84 B : 108
+ R : 24 G : 8 B : 24
+ R : 81 G : 79 B : 81
+ R : 106 G : 96 B : 142
+ R : 8 G : 8 B : 25
+ R : 143 G : 143 B : 147
+ R : 81 G : 82 B : 112
+ R : 22 G : 24 B : 42
+ R : 140 G : 144 B : 175
+ R : 43 G : 49 B : 83
+ R : 93 G : 107 B : 174
+ R : 148 G : 160 B : 219
+ R : 111 G : 139 B : 220
+ R : 121 G : 130 B : 156
+ R : 172 G : 177 B : 190
+ R : 111 G : 113 B : 116
+ R : 120 G : 146 B : 172
+ R : 181 G : 212 B : 234
+ R : 104 G : 135 B : 152
+ R : 121 G : 131 B : 134
+ R : 176 G : 205 B : 212
+ R : 207 G : 236 B : 243
+ R : 144 G : 172 B : 175
+ R : 55 G : 77 B : 78
+ R : 103 G : 134 B : 135
+ R : 104 G : 152 B : 153
+ R : 120 G : 168 B : 169
+ R : 8 G : 24 B : 24
+ R : 86 G : 112 B : 112
+ R : 120 G : 152 B : 152
+ R : 24 G : 45 B : 43
+ R : 127 G : 168 B : 152
+ R : 104 G : 153 B : 133
+ R : 8 G : 40 B : 24
+ R : 196 G : 226 B : 208
+ R : 24 G : 72 B : 40
+ R : 8 G : 56 B : 8
+ R : 8 G : 40 B : 8
+ R : 8 G : 24 B : 8
+ R : 24 G : 56 B : 24
+ R : 24 G : 40 B : 24
+ R : 128 G : 158 B : 128
+ R : 173 G : 201 B : 169
+ R : 24 G : 104 B : 8
+ R : 84 G : 113 B : 78
+ R : 51 G : 78 B : 45
+ R : 151 G : 187 B : 143
+ R : 56 G : 105 B : 44
+ R : 24 G : 74 B : 9
+ R : 40 G : 89 B : 24
+ R : 24 G : 56 B : 8
+ R : 40 G : 72 B : 24
+ R : 40 G : 88 B : 8
+ R : 65 G : 141 B : 12
+ R : 53 G : 107 B : 13
+ R : 115 G : 153 B : 87
+ R : 199 G : 229 B : 177
+ R : 79 G : 115 B : 46
+ R : 40 G : 72 B : 8
+ R : 24 G : 40 B : 8
+ R : 40 G : 56 B : 24
+ R : 147 G : 186 B : 106
+ R : 91 G : 152 B : 20
+ R : 99 G : 146 B : 47
+ R : 184 G : 223 B : 139
+ R : 59 G : 88 B : 24
+ R : 75 G : 112 B : 17
+ R : 58 G : 88 B : 8
+ R : 40 G : 56 B : 8
+ R : 56 G : 72 B : 24
+ R : 136 G : 174 B : 52
+ R : 56 G : 72 B : 8
+ R : 108 G : 134 B : 21
+ R : 172 G : 200 B : 57
+ R : 56 G : 56 B : 8
+ R : 40 G : 40 B : 8
+ R : 24 G : 24 B : 8
+ R : 56 G : 56 B : 24
+ R : 40 G : 40 B : 24
+ R : 80 G : 79 B : 49
+ R : 112 G : 109 B : 49
+ R : 248 G : 243 B : 143
+ R : 248 G : 243 B : 175
+ R : 248 G : 232 B : 88
+ R : 247 G : 234 B : 115
+ R : 84 G : 74 B : 17
+ R : 114 G : 109 B : 81
+ R : 225 G : 209 B : 123
+ R : 247 G : 240 B : 209
+ R : 181 G : 174 B : 149
+ R : 233 G : 191 B : 69
+ R : 247 G : 206 B : 85
+ R : 247 G : 209 B : 107
+ R : 140 G : 106 B : 24
+ R : 212 G : 172 B : 76
+ R : 166 G : 145 B : 96
+ R : 211 G : 191 B : 147
+ R : 56 G : 40 B : 8
+ R : 110 G : 80 B : 20
+ R : 205 G : 175 B : 116
+ R : 143 G : 108 B : 50
+ R : 79 G : 50 B : 8
+ R : 246 G : 174 B : 70
+ R : 184 G : 142 B : 77
+ R : 247 G : 177 B : 88
+ R : 231 G : 164 B : 92
+ R : 245 G : 197 B : 145
+ R : 40 G : 24 B : 8
+ R : 231 G : 152 B : 72
+ R : 171 G : 113 B : 54
+ R : 56 G : 40 B : 24
+ R : 144 G : 113 B : 81
+ R : 139 G : 77 B : 22
+ R : 112 G : 79 B : 49
+ R : 247 G : 176 B : 111
+ R : 245 G : 143 B : 55
+ R : 248 G : 152 B : 72
+ R : 238 G : 127 B : 40
+ R : 81 G : 47 B : 24
+ R : 230 G : 136 B : 72
+ R : 248 G : 152 B : 88
+ R : 244 G : 203 B : 174
+ R : 223 G : 102 B : 24
+ R : 248 G : 136 B : 72
+ R : 177 G : 73 B : 22
+ R : 56 G : 24 B : 8
+ R : 207 G : 105 B : 55
+ R : 174 G : 112 B : 80
+ R : 232 G : 120 B : 67
+ R : 227 G : 136 B : 96
+ R : 229 G : 94 B : 40
+ R : 144 G : 77 B : 49
+ R : 248 G : 136 B : 88
+ R : 198 G : 141 B : 117
+ R : 207 G : 72 B : 21
+ R : 246 G : 108 B : 55
+ R : 248 G : 120 B : 72
+ R : 241 G : 76 B : 23
+ R : 111 G : 45 B : 23
+ R : 208 G : 111 B : 80
+ R : 244 G : 145 B : 111
+ R : 50 G : 47 B : 46
+ R : 248 G : 88 B : 40
+ R : 175 G : 77 B : 50
+ R : 232 G : 120 B : 88
+ R : 104 G : 27 B : 8
+ R : 232 G : 104 B : 72
+ R : 248 G : 120 B : 88
+ R : 234 G : 161 B : 144
+ R : 209 G : 41 B : 8
+ R : 210 G : 56 B : 24
+ R : 145 G : 46 B : 24
+ R : 232 G : 72 B : 40
+ R : 248 G : 88 B : 56
+ R : 232 G : 88 B : 56
+ R : 248 G : 104 B : 72
+ R : 120 G : 25 B : 8
+ R : 176 G : 43 B : 20
+ R : 248 G : 72 B : 40
+ R : 209 G : 76 B : 51
+ R : 152 G : 25 B : 8
+ R : 136 G : 25 B : 8
+ R : 168 G : 24 B : 8
+ R : 233 G : 44 B : 23
+ R : 248 G : 104 B : 88
+ R : 173 G : 86 B : 75
+ R : 216 G : 24 B : 8
+ R : 200 G : 24 B : 8
+ R : 184 G : 24 B : 8
+ R : 211 G : 40 B : 24
+ R : 248 G : 56 B : 38
+ R : 232 G : 56 B : 40
+ R : 248 G : 72 B : 56
+ R : 232 G : 72 B : 59
+ R : 246 G : 116 B : 106
+ R : 204 G : 117 B : 108
+ R : 145 G : 82 B : 77
+ R : 80 G : 13 B : 8
+ R : 145 G : 51 B : 44
+ R : 246 G : 86 B : 75
+ R : 210 G : 82 B : 75
+ R : 232 G : 98 B : 91
+ R : 111 G : 51 B : 47
+ R : 145 G : 113 B : 111
+ R : 209 G : 48 B : 41
+ R : 176 G : 49 B : 44
+ R : 79 G : 49 B : 48
+ R : 174 G : 114 B : 112
+ R : 216 G : 8 B : 8
+ R : 200 G : 8 B : 8
+ R : 184 G : 8 B : 8
+ R : 168 G : 8 B : 8
+ R : 152 G : 8 B : 8
+ R : 136 G : 8 B : 8
+ R : 120 G : 8 B : 8
+ R : 104 G : 8 B : 8
+ R : 233 G : 24 B : 21
+ R : 216 G : 24 B : 24
+ R : 200 G : 24 B : 24
+ R : 184 G : 24 B : 24
+ R : 168 G : 24 B : 24
+ R : 56 G : 8 B : 8
+ R : 152 G : 24 B : 24
+ R : 248 G : 40 B : 40
+ R : 232 G : 40 B : 40
+ R : 136 G : 24 B : 24
+ R : 120 G : 24 B : 24
+ R : 40 G : 8 B : 8
+ R : 248 G : 56 B : 56
+ R : 104 G : 24 B : 24
+ R : 226 G : 56 B : 56
+ R : 24 G : 8 B : 8
+ R : 56 G : 24 B : 24
+ R : 40 G : 24 B : 24
+ R : 111 G : 80 B : 80
+ R : 178 G : 146 B : 146
+ R : 24 G : 24 B : 24
+ R : 8 G : 8 B : 8
+
+
+
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 24679
+CRC       : xbd
+
+
+
+------- IEND Chunk -------
+Name      : IEND
+Size      : 0
+CRC       : ®B`
+
+
+
+------- cHRM Chunk -------
+Name      : cHRM
+Size      : 32
+CRC       : `¹(
+
+WhitePointX: 0
+WhitePointY: 0,3457
+RedX       : 0
+RedY       : 0,35850000000000004
+GreenX     : 0
+GreenY     : 0,6299800000000001
+BlueX      : 0,33999
+BlueY      : 0
+
+
+
+------- gAMA Chunk -------
+Name      : gAMA
+Size      : 4
+CRC       : õª
+
+Gamma: 0,5553100000000001
+
+
+
+------- sBIT Chunk -------
+Chunk does not exist.
+
+
+
+------- sRGB Chunk -------
+Chunk does not exist.
+
+
+
+------- bKGD Chunk -------
+Chunk does not exist.
+
+
+
+------- pHYs Chunk -------
+Chunk does not exist.
+
+
+
+
+------- iTXt Chunk -------
+Name      : iTXt
+Size      : 25
+CRC       : Titl
+
+Keyword          : Title
+CompressionFlag  : 0
+CompressionMethod: 0
+LanguageTag      : 
+TranslatedKeyword: 
+Text             : Kolorowa papuga
+
+------- iTXt Chunk -------
+Name      : iTXt
+Size      : 32
+CRC       : Crea
+
+Keyword          : Creation Time
+CompressionFlag  : 0
+CompressionMethod: 0
+LanguageTag      : cn
+TranslatedKeyword: koko
+Text             : 15:00:32
+
+
+
+
+------- tEXt Chunk -------
+Name      : tEXt
+Size      : 16
+CRC       : Auth
+
+Keyword: Author
+Text   : Wikipedia
+
+------- tEXt Chunk -------
+Name      : tEXt
+Size      : 20
+CRC       : Comm
+
+Keyword: Comment
+Text   : ladna papuga
+
+
+
+
+------- iTXt Chunk -------
+Name      : zTXt
+Size      : 27
+CRC       : Desc
+
+Keyword          : Description
+CompressionMethod: 0
+CompressedText   : xH,(MO _
+DecompressedText : Papuga
+
+------- iTXt Chunk -------
+Name      : zTXt
+Size      : 45
+CRC       : Desc
+
+Keyword          : Description
+CompressionMethod: 0
+CompressedText   : xH,(MOTÈMTÈÎÏÉ/Ê/OU(ÈÌ/J o	
+DecompressedText : Papuga ma kolorowe piora

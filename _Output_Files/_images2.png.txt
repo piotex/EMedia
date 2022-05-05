@@ -1,0 +1,150 @@
+
+
+
+------- IHDR Chunk -------
+Name             : IHDR
+Size             : 13
+CRC              : g"#
+
+Width            : 500
+Height           : 306
+BitDepth         : 8
+ColorType        : 6
+CompressionMethod: 0
+FilterMethod     : 0
+InterlaceMethod  : 0
+
+
+
+------- PLTE Chunk -------
+Chunk does not exist.
+
+
+
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : xÚÌý
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : ôø®B
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : ËC¥
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : /.Î
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : ¿G
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : âË)Ñ
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : Ð#þ
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : G%ñ
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 15740
+CRC       : d©ø
+
+
+
+------- IEND Chunk -------
+Name      : IEND
+Size      : 0
+CRC       : ®B`
+
+
+
+------- cHRM Chunk -------
+Name      : cHRM
+Size      : 32
+CRC       : ºQ<
+
+WhitePointX: 0
+WhitePointY: 0,31270000000000003
+RedX       : 0
+RedY       : 0,329
+GreenX     : 0
+GreenY     : 0,64
+BlueX      : 0,33
+BlueY      : 0
+
+
+
+------- gAMA Chunk -------
+Name      : gAMA
+Size      : 4
+CRC       : üa
+
+Gamma: 0,45455
+
+
+
+------- sBIT Chunk -------
+Chunk does not exist.
+
+
+
+------- sRGB Chunk -------
+Name      : sRGB
+Size      : 1
+CRC       : ®Îé
+
+RenderingIntent_Number: 0
+RenderingIntent       : Perceptual
+
+
+
+------- bKGD Chunk -------
+Name      : bKGD
+Size      : 6
+CRC       :  ½§
+
+PaletteIndex: 0
+Gray        : 0
+Red         : 255
+Green       : 255
+Blue        : 255
+
+
+
+------- pHYs Chunk -------
+Chunk does not exist.
+
+------- iTXt Chunk -------
+Chunk does not exist.
+
+
+
+
+------- tEXt Chunk -------
+Name      : tEXt
+Size      : 18
+CRC       : EXIF
+
+Keyword: EXIF:Orientation
+Text   : 1
+
+------- iTXt Chunk -------
+Chunk does not exist.

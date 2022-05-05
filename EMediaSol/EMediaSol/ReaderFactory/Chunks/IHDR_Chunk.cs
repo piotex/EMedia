@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +45,41 @@ namespace EMediaSol.ReaderFactory.Chunks
         protected override string GetChunkName()
         {
             return "IHDR";
+        }
+        public override void PlotChunk(string path)
+        {
+            if (!File.Exists(path))
+            {
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.Write("");
+                }
+            }
+            using (StreamWriter sw = File.AppendText(path))
+            {
+                sw.WriteLine("");
+                sw.WriteLine("");
+                sw.WriteLine("");
+                sw.WriteLine("------- IHDR Chunk -------");
+                if (ChunkExist)
+                {
+                    sw.WriteLine("Name             : " + Name);
+                    sw.WriteLine("Size             : " + Size);
+                    sw.WriteLine("CRC              : " + CRC);
+                    sw.WriteLine("");              
+                    sw.WriteLine("Width            : " + Width);
+                    sw.WriteLine("Height           : " + Height);
+                    sw.WriteLine("BitDepth         : " + BitDepth);
+                    sw.WriteLine("ColorType        : " + ColorType);
+                    sw.WriteLine("CompressionMethod: " + CompressionMethod);
+                    sw.WriteLine("FilterMethod     : " + FilterMethod     );
+                    sw.WriteLine("InterlaceMethod  : " + InterlaceMethod  );
+                }
+                else
+                {
+                    sw.WriteLine("Chunk does not exist.");
+                }
+            }
         }
     }
 }

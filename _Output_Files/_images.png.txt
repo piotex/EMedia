@@ -1,0 +1,197 @@
+
+
+
+------- IHDR Chunk -------
+Name             : IHDR
+Size             : 13
+CRC              : JÆ
+
+Width            : 275
+Height           : 183
+BitDepth         : 8
+ColorType        : 3
+CompressionMethod: 0
+FilterMethod     : 0
+InterlaceMethod  : 0
+
+
+
+------- PLTE Chunk -------
+Name      : PLTE
+Size      : 357
+CRC       :  Ç
+
+RGB Palet List: 
+ R : 255 G : 255 B : 255
+ R : 193 G : 245 B : 255
+ R : 0 G : 164 B : 255
+ R : 13 G : 174 B : 255
+ R : 156 G : 204 B : 241
+ R : 23 G : 182 B : 255
+ R : 141 G : 150 B : 187
+ R : 6 G : 54 B : 255
+ R : 196 G : 198 B : 214
+ R : 64 G : 215 B : 255
+ R : 231 G : 233 B : 242
+ R : 195 G : 246 B : 255
+ R : 190 G : 245 B : 255
+ R : 0 G : 162 B : 255
+ R : 0 G : 165 B : 255
+ R : 0 G : 160 B : 255
+ R : 0 G : 50 B : 255
+ R : 248 G : 254 B : 255
+ R : 205 G : 247 B : 255
+ R : 17 G : 177 B : 255
+ R : 0 G : 47 B : 255
+ R : 20 G : 180 B : 255
+ R : 0 G : 168 B : 255
+ R : 201 G : 199 B : 212
+ R : 156 G : 208 B : 243
+ R : 66 G : 220 B : 255
+ R : 244 G : 253 B : 255
+ R : 142 G : 151 B : 186
+ R : 144 G : 153 B : 184
+ R : 144 G : 146 B : 183
+ R : 0 G : 43 B : 255
+ R : 11 G : 172 B : 255
+ R : 213 G : 248 B : 255
+ R : 231 G : 251 B : 255
+ R : 178 G : 241 B : 255
+ R : 197 G : 250 B : 255
+ R : 223 G : 250 B : 255
+ R : 59 G : 211 B : 255
+ R : 147 G : 155 B : 182
+ R : 163 G : 237 B : 255
+ R : 199 G : 242 B : 255
+ R : 0 G : 34 B : 255
+ R : 235 G : 252 B : 255
+ R : 173 G : 178 B : 203
+ R : 191 G : 194 B : 212
+ R : 202 G : 255 B : 255
+ R : 152 G : 160 B : 193
+ R : 44 G : 198 B : 255
+ R : 37 G : 190 B : 255
+ R : 56 G : 208 B : 255
+ R : 10 G : 64 B : 255
+ R : 142 G : 232 B : 255
+ R : 118 G : 227 B : 255
+ R : 170 G : 228 B : 250
+ R : 158 G : 214 B : 245
+ R : 242 G : 243 B : 247
+ R : 213 G : 215 B : 228
+ R : 157 G : 166 B : 197
+ R : 91 G : 195 B : 235
+ R : 1 G : 154 B : 255
+ R : 39 G : 213 B : 255
+ R : 5 G : 72 B : 255
+ R : 3 G : 135 B : 255
+ R : 111 G : 127 B : 208
+ R : 4 G : 115 B : 255
+ R : 143 G : 187 B : 227
+ R : 185 G : 230 B : 244
+ R : 147 G : 196 B : 255
+ R : 133 G : 145 B : 191
+ R : 3 G : 127 B : 255
+ R : 0 G : 20 B : 255
+ R : 77 G : 182 B : 252
+ R : 17 G : 81 B : 255
+ R : 91 G : 109 B : 222
+ R : 152 G : 225 B : 255
+ R : 3 G : 146 B : 255
+ R : 65 G : 91 B : 232
+ R : 122 G : 136 B : 199
+ R : 45 G : 90 B : 255
+ R : 53 G : 83 B : 236
+ R : 168 G : 196 B : 219
+ R : 213 G : 230 B : 244
+ R : 192 G : 220 B : 245
+ R : 119 G : 151 B : 201
+ R : 112 G : 176 B : 215
+ R : 97 G : 190 B : 228
+ R : 125 G : 166 B : 204
+ R : 135 G : 200 B : 249
+ R : 81 G : 154 B : 222
+ R : 102 G : 135 B : 255
+ R : 71 G : 166 B : 230
+ R : 105 G : 158 B : 211
+ R : 167 G : 182 B : 255
+ R : 224 G : 230 B : 255
+ R : 132 G : 157 B : 196
+ R : 104 G : 170 B : 218
+ R : 141 G : 188 B : 255
+ R : 149 G : 189 B : 226
+ R : 81 G : 136 B : 228
+ R : 76 G : 100 B : 227
+ R : 117 G : 162 B : 255
+ R : 106 G : 151 B : 255
+ R : 126 G : 173 B : 255
+ R : 167 G : 198 B : 220
+ R : 26 G : 106 B : 255
+ R : 97 G : 137 B : 255
+ R : 66 G : 107 B : 255
+ R : 95 G : 198 B : 255
+ R : 137 G : 215 B : 255
+ R : 117 G : 133 B : 200
+ R : 99 G : 188 B : 251
+ R : 101 G : 119 B : 212
+ R : 91 G : 148 B : 224
+ R : 3 G : 120 B : 255
+ R : 73 G : 97 B : 231
+ R : 133 G : 145 B : 226
+ R : 153 G : 162 B : 227
+ R : 171 G : 175 B : 223
+ R : 115 G : 207 B : 255
+
+
+
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 4910
+CRC       : xí]
+
+
+
+------- IEND Chunk -------
+Name      : IEND
+Size      : 0
+CRC       : ®B`
+
+
+
+------- cHRM Chunk -------
+Chunk does not exist.
+
+
+
+------- gAMA Chunk -------
+Chunk does not exist.
+
+
+
+------- sBIT Chunk -------
+Chunk does not exist.
+
+
+
+------- sRGB Chunk -------
+Chunk does not exist.
+
+
+
+------- bKGD Chunk -------
+Chunk does not exist.
+
+
+
+------- pHYs Chunk -------
+Chunk does not exist.
+
+------- iTXt Chunk -------
+Chunk does not exist.
+
+------- tEXt Chunk -------
+Chunk does not exist.
+
+------- iTXt Chunk -------
+Chunk does not exist.

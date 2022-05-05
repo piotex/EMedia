@@ -1,0 +1,114 @@
+
+
+
+------- IHDR Chunk -------
+Name             : IHDR
+Size             : 13
+CRC              : g"#
+
+Width            : 500
+Height           : 306
+BitDepth         : 8
+ColorType        : 6
+CompressionMethod: 0
+FilterMethod     : 0
+InterlaceMethod  : 0
+
+
+
+------- PLTE Chunk -------
+Chunk does not exist.
+
+
+
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : xÚÌý
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : ôø®B
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : ËC¥
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : /.Î
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : ¿G
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : âË)Ñ
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : Ð#þ
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 32768
+CRC       : G%ñ
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 15740
+CRC       : d©ø
+
+
+
+------- IEND Chunk -------
+Name      : IEND
+Size      : 0
+CRC       : ®B`
+
+
+
+------- cHRM Chunk -------
+Chunk does not exist.
+
+
+
+------- gAMA Chunk -------
+Chunk does not exist.
+
+
+
+------- sBIT Chunk -------
+Chunk does not exist.
+
+
+
+------- sRGB Chunk -------
+Chunk does not exist.
+
+
+
+------- bKGD Chunk -------
+Chunk does not exist.
+
+
+
+------- pHYs Chunk -------
+Chunk does not exist.
+
+------- iTXt Chunk -------
+Chunk does not exist.
+
+------- tEXt Chunk -------
+Chunk does not exist.
+
+------- iTXt Chunk -------
+Chunk does not exist.

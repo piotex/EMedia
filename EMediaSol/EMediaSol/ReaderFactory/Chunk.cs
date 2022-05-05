@@ -9,10 +9,10 @@ namespace EMediaSol.ReaderFactory
     public class Chunk : PngBitReader
     {
         public string Name;
-        public long Size;
+        public long   Size;
         public byte[] Data;
         public string CRC;
-        public bool ChunkExist;
+        public bool   ChunkExist;
 
         /// <summary>
         /// temporary table for storing file bytes

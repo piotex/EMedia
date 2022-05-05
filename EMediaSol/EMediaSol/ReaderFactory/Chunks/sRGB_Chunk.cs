@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,8 +9,8 @@ namespace EMediaSol.ReaderFactory.Chunks
 {
     public class sRGB_Chunk : ChunkABS
     {
-        public int RenderingIntent_Number = 0;
-        public string RenderingIntent = "";
+        public int    RenderingIntent_Number = 0;
+        public string RenderingIntent        = "";
         public sRGB_Chunk(byte[] _tab) : base(_tab)
         {
         }
@@ -39,6 +40,36 @@ namespace EMediaSol.ReaderFactory.Chunks
         protected override string GetChunkName()
         {
             return "sRGB";
+        }
+        public override void PlotChunk(string path)
+        {
+            if (!File.Exists(path))
+            {
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.Write("");
+                }
+            }
+            using (StreamWriter sw = File.AppendText(path))
+            {
+                sw.WriteLine("");
+                sw.WriteLine("");
+                sw.WriteLine("");
+                sw.WriteLine("------- sRGB Chunk -------");
+                if (ChunkExist)
+                {
+                    sw.WriteLine("Name      : " + Name);
+                    sw.WriteLine("Size      : " + Size);
+                    sw.WriteLine("CRC       : " + CRC);
+                    sw.WriteLine("");
+                    sw.WriteLine("RenderingIntent_Number: " + RenderingIntent_Number);
+                    sw.WriteLine("RenderingIntent       : " + RenderingIntent);
+                }
+                else
+                {
+                    sw.WriteLine("Chunk does not exist.");
+                }
+            }
         }
     }
 }

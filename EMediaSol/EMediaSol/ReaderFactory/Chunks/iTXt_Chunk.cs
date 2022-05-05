@@ -103,5 +103,45 @@ namespace EMediaSol.ReaderFactory.Chunks
         {
             return "iTXt";
         }
+        public override void PlotChunk(string path)
+        {
+            if (!File.Exists(path))
+            {
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.Write("");
+                }
+            }
+            using (StreamWriter sw = File.AppendText(path))
+            {
+                if (ChunkExist)
+                {
+                    sw.WriteLine("");
+                    sw.WriteLine("");
+                    sw.WriteLine("");
+                    foreach (var item in ListOfITXtChuks)
+                    {
+                        sw.WriteLine("");
+                        sw.WriteLine("------- iTXt Chunk -------");
+                        sw.WriteLine("Name      : " + item.Name);
+                        sw.WriteLine("Size      : " + item.Size);
+                        sw.WriteLine("CRC       : " + item.CRC);
+                        sw.WriteLine("");
+                        sw.WriteLine("Keyword          : " + item.Keyword          );
+                        sw.WriteLine("CompressionFlag  : " + item.CompressionFlag  );
+                        sw.WriteLine("CompressionMethod: " + item.CompressionMethod);
+                        sw.WriteLine("LanguageTag      : " + item.LanguageTag      );
+                        sw.WriteLine("TranslatedKeyword: " + item.TranslatedKeyword);
+                        sw.WriteLine("Text             : " + item.Text);
+                    }
+                }
+                else
+                {
+                    sw.WriteLine("");
+                    sw.WriteLine("------- iTXt Chunk -------");
+                    sw.WriteLine("Chunk does not exist.");
+                }
+            }
+        }
     }
 }

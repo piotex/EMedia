@@ -1,0 +1,99 @@
+
+
+
+------- IHDR Chunk -------
+Name             : IHDR
+Size             : 13
+CRC              : »ùB
+
+Width            : 143
+Height           : 195
+BitDepth         : 8
+ColorType        : 6
+CompressionMethod: 0
+FilterMethod     : 0
+InterlaceMethod  : 0
+
+
+
+------- PLTE Chunk -------
+Chunk does not exist.
+
+
+
+
+------- IDAT Chunk -------
+Name      : IDAT
+Size      : 55879
+CRC       : x^ìý
+
+
+
+------- IEND Chunk -------
+Name      : IEND
+Size      : 0
+CRC       : ®B`
+
+
+
+------- cHRM Chunk -------
+Chunk does not exist.
+
+
+
+------- gAMA Chunk -------
+Name      : gAMA
+Size      : 4
+CRC       : üa
+
+Gamma: 0,45455
+
+
+
+------- sBIT Chunk -------
+Chunk does not exist.
+
+
+
+------- sRGB Chunk -------
+Name      : sRGB
+Size      : 1
+CRC       : ®Îé
+
+RenderingIntent_Number: 0
+RenderingIntent       : Perceptual
+
+
+
+------- bKGD Chunk -------
+Chunk does not exist.
+
+
+
+------- pHYs Chunk -------
+Name      : pHYs
+Size      : 9
+Data      : System.Byte[]
+CRC       : Þfx
+ChunkExist: True
+
+PixelPerUnitX: 4724
+PixelPerUnitY: 4724
+UnitSoecifier: 1
+
+------- iTXt Chunk -------
+Chunk does not exist.
+
+
+
+
+------- tEXt Chunk -------
+Name      : tEXt
+Size      : 33
+CRC       : Crea
+
+Keyword: Creation Time
+Text   : 2021:04:30 22:28:06
+
+------- iTXt Chunk -------
+Chunk does not exist.
