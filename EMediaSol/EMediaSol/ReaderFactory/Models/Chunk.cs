@@ -19,7 +19,9 @@ namespace EMediaSol.ReaderFactory
         /// </summary>
         protected byte[] tab;
 
-
+        public Chunk()
+        {
+        }
 
         public byte[] NameToByte()
         {
@@ -45,5 +47,8 @@ namespace EMediaSol.ReaderFactory
             }
             return res;
         }
+
+
+
     }
 }

@@ -28,3 +28,10 @@ C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\n
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\net5.0\ICSharpCode.SharpZipLib.xml
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\net5.0\MathNet.Numerics.dll
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\net5.0\MathNet.Numerics.xml
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\net5.0\Accord.dll.config
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\net5.0\Accord.Math.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\net5.0\Accord.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\net5.0\Accord.Math.Core.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\net5.0\Accord.Math.xml
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\net5.0\Accord.xml
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ConsoleGui\bin\Debug\net5.0\Accord.Math.Core.xml

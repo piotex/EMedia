@@ -27,7 +27,7 @@ namespace EMediaSol
             chart_2 = chart2;
             //doSth();
 
-            test_3();
+            //test_3();
             //test_2();         //tak sobie dzialajace FFT
 
             //new FourierTransform().PlotWaveform(0,0,0,0);

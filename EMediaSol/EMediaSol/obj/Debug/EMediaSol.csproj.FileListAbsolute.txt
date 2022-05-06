@@ -20,3 +20,11 @@ C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\Do
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\MathNet.Numerics.xml
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\System.ValueTuple.xml
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EMediaSol.Fourier.FourierTransform_Form.resources
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EMediaSol.Accord.resources
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\Accord.dll.config
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\Accord.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\Accord.Math.Core.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\Accord.Math.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\Accord.xml
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\Accord.Math.xml
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\Accord.Math.Core.xml
