@@ -96,5 +96,62 @@ namespace EMediaSol.ReaderFactory.Chunks
                 }
             }
         }
+        public override byte[] GetByteChunk()
+        {
+            List<byte[]> byteList = new List<byte[]>();
+
+            foreach (var item in ListOfIdatChuks)
+            {
+                byte[] res = new byte[4 + 4 + item.Data.Length + 4];
+                int idx = 0;
+                var name = item.NameToByte();
+                var size = item.SizeToByte();
+                var crc  = item.CRCToByte();
+
+                for (int i = 0; i < 4; i++)
+                {
+                    res[idx] = size[i];
+                    idx++;
+                }
+                for (int i = 0; i < 4; i++)
+                {
+                    res[idx] = name[i];
+                    idx++;
+                }
+                for (int i = 0; i < item.Data.Length; i++)
+                {
+                    res[idx] = item.Data[i];
+                    idx++;
+                }
+                for (int i = 0; i < 4; i++)
+                {
+                    res[idx] = crc[i];
+                    idx++;
+                }
+                byteList.Add(res);
+            }
+            int length = 0;
+            foreach (var item in byteList)
+            {
+                length += item.Length;
+            }
+
+            byte[] result = new byte[length];
+            int idx_gl = 0;
+
+            foreach (var item in byteList)
+            {
+                for (int i = 0; i < item.Length; i++)
+                {
+                    result[idx_gl] = item[i];
+                    idx_gl++;
+                }
+            }
+
+            return result;
+        }
+
+
+
     }
 }

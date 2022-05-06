@@ -110,3 +110,5 @@ C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ChunkTests\bin\Debug\n
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ChunkTests\bin\Debug\net5.0\ICSharpCode.SharpZipLib.dll
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ChunkTests\bin\Debug\net5.0\ICSharpCode.SharpZipLib.pdb
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ChunkTests\bin\Debug\net5.0\ICSharpCode.SharpZipLib.xml
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ChunkTests\bin\Debug\net5.0\MathNet.Numerics.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\ChunkTests\bin\Debug\net5.0\MathNet.Numerics.xml

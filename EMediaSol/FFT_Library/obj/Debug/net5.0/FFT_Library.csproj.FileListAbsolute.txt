@@ -1,0 +1,12 @@
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\FFT_Library\obj\Debug\net5.0\FFT_Library.csproj.AssemblyReference.cache
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\FFT_Library\obj\Debug\net5.0\FFT_Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\FFT_Library\obj\Debug\net5.0\FFT_Library.AssemblyInfoInputs.cache
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\FFT_Library\obj\Debug\net5.0\FFT_Library.AssemblyInfo.cs
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\FFT_Library\obj\Debug\net5.0\FFT_Library.csproj.CoreCompileInputs.cache
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\FFT_Library\bin\Debug\net5.0\FFT_Library.deps.json
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\FFT_Library\bin\Debug\net5.0\FFT_Library.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\FFT_Library\bin\Debug\net5.0\ref\FFT_Library.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\FFT_Library\bin\Debug\net5.0\FFT_Library.pdb
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\FFT_Library\obj\Debug\net5.0\FFT_Library.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\FFT_Library\obj\Debug\net5.0\ref\FFT_Library.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\FFT_Library\obj\Debug\net5.0\FFT_Library.pdb

@@ -9,6 +9,17 @@ namespace ConsoleGui
     {
         static void Main(string[] args)
         {
+            //old_logic_good();
+            test_fourier();
+        }
+
+        private static void test_fourier()
+        {
+        }
+
+        static void old_logic_good()
+        {
+
             /*
             string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\images6_PLTE.png";
             byte[] inputArray = new PngBitReader().ReadPngFile(inputFilename);
@@ -26,11 +37,10 @@ namespace ConsoleGui
             Console.WriteLine("\r\n\r\n");
             foreach (FileInfo file in Files)
             {
-                saveImpDataInDirectory(file.FullName, mainPath+fileToAppend);
+                saveImpDataInDirectory(file.FullName, mainPath + fileToAppend);
                 //printImpDataInDirectory(file.FullName);
             }
             Console.WriteLine("\r\n\r\n");
-
 
 
         }

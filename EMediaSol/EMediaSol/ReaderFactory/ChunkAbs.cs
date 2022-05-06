@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -86,6 +87,66 @@ namespace EMediaSol.ReaderFactory
             return -1;
             //throw new Exception("Brak Chunka -> Chunk  -> GetChunkIndex(string)");
         }
+        public virtual void AppendAllBytes(string path, byte[] bytes)
+        {
+            using (var stream = new FileStream(path, FileMode.Append))
+            {
+                stream.Write(bytes, 0, bytes.Length);
+            }
+        }
+        public virtual void DeleteFile(string path)
+        {
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+        public virtual void AppendChunkBytesToFile(string path)
+        {
+            if (!File.Exists(path))
+            {
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.Write("");
+                }
+            }
+            byte[] bytes = GetByteChunk();
+            using (var stream = new FileStream(path, FileMode.Append))
+            {
+                stream.Write(bytes, 0, bytes.Length);
+            }
+        }
+        public virtual byte[] GetByteChunk()
+        {
+            byte[] res = new byte[4+4+Data.Length+4];
+            int idx = 0;
+            var name = NameToByte();
+            var size = SizeToByte();
+            var crc  = CRCToByte();
+
+            for (int i = 0; i < 4; i++)
+            {
+                res[idx] = size[i];
+                idx++;
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                res[idx] = name[i];
+                idx++;
+            }
+            for (int i = 0; i < Data.Length; i++)
+            {
+                res[idx] = Data[i];
+                idx++;
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                res[idx] = crc[i];
+                idx++;
+            }
+            return res;
+        }
+
         /// <summary>
         /// 
         /// </summary>

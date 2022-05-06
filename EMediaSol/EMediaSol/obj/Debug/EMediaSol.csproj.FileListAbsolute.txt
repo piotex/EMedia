@@ -13,3 +13,10 @@ C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EM
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\ICSharpCode.SharpZipLib.dll
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\ICSharpCode.SharpZipLib.pdb
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\MathNet.Numerics.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\System.ValueTuple.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\MathNet.Numerics.xml
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\bin\Debug\System.ValueTuple.xml
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol\EMediaSol\obj\Debug\EMediaSol.Fourier.FourierTransform_Form.resources

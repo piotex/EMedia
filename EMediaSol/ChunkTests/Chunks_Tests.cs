@@ -130,6 +130,7 @@ namespace ChunkTests
         public void PLTE_Chunk_Test()
         {
             string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\images.png";
+            //string inputFilename = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\images3.png";
 
             byte[] inputArray = new PngBitReader().ReadPngFile(inputFilename);
 

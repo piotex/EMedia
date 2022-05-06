@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "xZrVPwL+f+5l562eFq5UrNyl8knWCdra+5a7ba47VCPyueeY6NT2JlUfuIHJRkFPqQj1NDQ8H1adxx1YQJSYqQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\EMedia\\EMediaSol\\FFT_Library\\FFT_Library.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pkubo\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512",
+    "C:\\Users\\pkubo\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\pkubo\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\pkubo\\.nuget\\packages\\system.drawing.common\\5.0.3\\system.drawing.common.5.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
