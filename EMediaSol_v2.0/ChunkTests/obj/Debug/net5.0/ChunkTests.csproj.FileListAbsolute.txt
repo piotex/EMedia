@@ -232,3 +232,7 @@ C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v2.0\ChunkTests\obj\De
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v2.0\ChunkTests\obj\Debug\net5.0\ref\ChunkTests.dll
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v2.0\ChunkTests\obj\Debug\net5.0\ChunkTests.pdb
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v2.0\ChunkTests\obj\Debug\net5.0\ChunkTests.genruntimeconfig.cache
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v2.0\ChunkTests\bin\Debug\net5.0\AForge.Math.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v2.0\ChunkTests\bin\Debug\net5.0\AForge.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v2.0\ChunkTests\bin\Debug\net5.0\AForge.Math.xml
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v2.0\ChunkTests\bin\Debug\net5.0\AForge.xml

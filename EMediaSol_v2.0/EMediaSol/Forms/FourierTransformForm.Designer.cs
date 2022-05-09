@@ -30,12 +30,10 @@ namespace EMediaSol.Forms
         private void InitializeComponent()
         {
             this.pictureBox_amp = new System.Windows.Forms.PictureBox();
-            this.pictureBox_phase = new System.Windows.Forms.PictureBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_amp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_phase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,15 +45,6 @@ namespace EMediaSol.Forms
             this.pictureBox_amp.Size = new System.Drawing.Size(100, 50);
             this.pictureBox_amp.TabIndex = 0;
             this.pictureBox_amp.TabStop = false;
-            // 
-            // pictureBox_phase
-            // 
-            this.pictureBox_phase.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox_phase.Location = new System.Drawing.Point(118, 63);
-            this.pictureBox_phase.Name = "pictureBox_phase";
-            this.pictureBox_phase.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox_phase.TabIndex = 1;
-            this.pictureBox_phase.TabStop = false;
             // 
             // trackBar1
             // 
@@ -95,13 +84,11 @@ namespace EMediaSol.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.trackBar1);
-            this.Controls.Add(this.pictureBox_phase);
             this.Controls.Add(this.pictureBox_amp);
             this.Name = "FourierTransformForm";
             this.Text = "FourierTransformForm";
             this.Load += new System.EventHandler(this.FourierTransformForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_amp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_phase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -111,7 +98,6 @@ namespace EMediaSol.Forms
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox_amp;
-        private System.Windows.Forms.PictureBox pictureBox_phase;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;

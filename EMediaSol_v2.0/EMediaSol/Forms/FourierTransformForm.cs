@@ -68,7 +68,7 @@ namespace EMediaSol.Forms
                 Width = pictureBox_amp.Width * 2 + 2 * ofset;
                 Height = pictureBox_amp.Height + 2 * ofset + 100;
 
-                pictureBox_phase.Location = new Point(pictureBox_amp.Location.X + pictureBox_amp.Width + ofset, pictureBox_phase.Location.Y);
+                //pictureBox_phase.Location = new Point(pictureBox_amp.Location.X + pictureBox_amp.Width + ofset, pictureBox_phase.Location.Y);
             }
             catch (Exception eeeee)
             {
