@@ -35,7 +35,7 @@ namespace ChunkTests
             IHDR_Chunk.AppendChunkBytesToFile(dest_path);
             PLTE_Chunk.AppendChunkBytesToFile(dest_path);
 
-
+            /*
 
             string msg = "0007IDAT\r\n\r\n-\r\nXXXX";
             byte[] xxx = new byte[msg.Length];
@@ -45,7 +45,7 @@ namespace ChunkTests
             }
             IHDR_Chunk.AppendAllBytes(dest_path, xxx);
 
-
+            */
 
 
             IDAT_Chunk.AppendChunkBytesToFile(dest_path);
