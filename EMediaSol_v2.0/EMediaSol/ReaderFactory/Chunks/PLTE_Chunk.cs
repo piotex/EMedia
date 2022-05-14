@@ -56,7 +56,7 @@ namespace EMediaSol.ReaderFactory.Chunks
                     }
                 }
             }
-            bmp.Save(@"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\xxx_file.png", ImageFormat.Png);
+            bmp.Save(@"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\Images\xxx_file.png", ImageFormat.Png);
         }
 
         protected override string GetChunkName()

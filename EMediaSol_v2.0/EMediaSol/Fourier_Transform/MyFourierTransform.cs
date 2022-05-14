@@ -66,25 +66,43 @@ namespace EMediaSol.Fourier_Transform
 
             return fft;
         }
-        public double[,] getFftAmplitudeMatrix(int Width, int Height, Complex[,] tmp)
+        public double[,] getFftNormalizedMagnitudeMatrix(int Width, int Height, Complex[,] tmp)
         {
-            int skala = 1000;
             double[,] fft = new double[Width, Height];
             for (int i = 0; i < Width; i++)
             {
                 for (int j = 0; j < Height; j++)
                 {
-                    fft[i, j] = Math.Abs(Math.Sqrt(
-                        Math.Pow(tmp[i, j].Re, 2) + Math.Pow(tmp[i, j].Im, 2)
-                        ));
-                    if (fft[i, j] * skala > 255)
-                    {
-                        fft[i, j] = 255;
-                    }
-                    else
-                    {
-                        fft[i, j] *= skala;
-                    }
+                    fft[i, j] = tmp[i, j].Magnitude;
+                    fft[i, j] = 20 * Math.Log10(Math.Abs(fft[i, j]));       //do skali decybelowej
+
+                    fft[i, j] = Math.Abs(fft[i, j]);
+
+                }
+            }
+            return fft;
+        }
+        public double[,] getFftMagnitudeMatrix_NoLog(int Width, int Height, Complex[,] tmp)
+        {
+            double[,] fft = new double[Width, Height];
+            for (int i = 0; i < Width; i++)
+            {
+                for (int j = 0; j < Height; j++)
+                {
+                    fft[i, j] = tmp[i, j].Magnitude;
+                    fft[i, j] = Math.Abs(fft[i, j]);
+                }
+            }
+            return fft;
+        }
+        public double[,] getFftPhaseMatrix(int Width, int Height, Complex[,] tmp)
+        {
+            double[,] fft = new double[Width, Height];
+            for (int i = 0; i < Width; i++)
+            {
+                for (int j = 0; j < Height; j++)
+                {
+                    fft[i, j] = tmp[i, j].Phase;
                 }
             }
             return fft;
@@ -98,7 +116,7 @@ namespace EMediaSol.Fourier_Transform
                 for (int j = 0; j < bmp.Height; j++)
                 {
                     Color col = bmp.GetPixel(i, j);
-                    int gre = (int)((col.R + col.G + col.B) / 3.0);
+                    double gre = (int)((col.R + col.G + col.B) / 3.0);
 
                     Complex c = new Complex(gre, 0);
                     tmp[i, j] = c;
@@ -107,17 +125,55 @@ namespace EMediaSol.Fourier_Transform
             return tmp;
         }
 
-        public double[,] CalcTransform(Bitmap bmp)
+        public double[,] CalcMagnitudeTransform(Bitmap bmp)
         {
             Complex[,] tmp = getImageColourMatrix(bmp);
 
-            //FourierTransform.DFT2(tmp, FourierTransform.Direction.Forward);
             FourierTransform.FFT2(tmp, FourierTransform.Direction.Forward);
 
-            double[,] fft = getFftAmplitudeMatrix(bmp.Width, bmp.Height, tmp);
-            fft = Shift(bmp.Width,bmp.Height,fft);
+            double[,] fft = getFftNormalizedMagnitudeMatrix(bmp.Width, bmp.Height, tmp);
+            fft = Shift(bmp.Width, bmp.Height, fft);
 
             return fft;
+        }
+        public double[,] CalcPhaseTransform(Bitmap bmp)
+        {
+            Complex[,] tmp = getImageColourMatrix(bmp);
+
+            FourierTransform.FFT2(tmp, FourierTransform.Direction.Forward);
+
+            double[,] fft = getFftPhaseMatrix(bmp.Width, bmp.Height, tmp);
+            fft = Shift(bmp.Width, bmp.Height, fft);
+
+            return fft;
+        }
+
+        public Complex[,] doubleToCOmplex(int x, int y, double[,] tmp)
+        {
+            Complex[,] ccc = new Complex[x, y];
+            for (int i = 0; i < x; i++)
+            {
+                for (int j = 0; j < y; j++)
+                {
+                    Complex c = new Complex(tmp[i, j], 0);
+                    ccc[i, j] = c;
+                }
+            }
+            return ccc;
+        }
+
+        public double[,] CalcInvTransform(Bitmap bmp)
+        {
+            Complex[,] tmp = getImageColourMatrix(bmp);
+
+            FourierTransform.FFT2(tmp, FourierTransform.Direction.Forward);
+            FourierTransform.FFT2(tmp, FourierTransform.Direction.Backward);
+
+            double[,] fft = getFftMagnitudeMatrix_NoLog(bmp.Width, bmp.Height, tmp);
+
+            return fft;
+
+
         }
 
     }
