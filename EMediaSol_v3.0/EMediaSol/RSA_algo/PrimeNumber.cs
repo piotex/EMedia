@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Numerics;
@@ -8,8 +9,18 @@ namespace EMediaSol.RSA_algo
 {
     public class PrimeNumber
     {
+        private List<BigInteger> _numbers = new List<BigInteger>(){
+            1,
+            3
+
+
+            };
+
+
+
         public BigInteger ReadRandomPrimeNumber()
         {
+            //string path = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\PrimeNumbers.txt";
             string path = @"C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\PrimeNumbers.txt";
 
             int counter = 0;
