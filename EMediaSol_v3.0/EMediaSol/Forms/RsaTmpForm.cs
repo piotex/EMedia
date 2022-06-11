@@ -21,9 +21,11 @@ namespace EMediaSol.Forms
 
         private void RsaTmpForm_Load(object sender, EventArgs e)
         {
-            RsaNumbers rSA = new RsaNumbers();
-            
+            RsaNumbers rsa = new RsaNumbers();
+            rsa = rsa.GetNewObj();
 
+            textBox1.Text = "d: " + rsa.d + "\r\n";
+            textBox1.Text +="e: " + rsa.e + "\r\n";
 
 
 
@@ -37,7 +39,7 @@ namespace EMediaSol.Forms
 
 
             //var rsa = new RSA_algo.RSA_algo();
-            var prime = new PrimeNumber();
+            //var prime = new PrimeNumber();
             /*
             textBox1.Text = "";
             var tmp = new PrimeNumber().ReadRandomPrimeNumber();
