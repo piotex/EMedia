@@ -11,7 +11,6 @@ C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\RsaTests\bin\Debu
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\RsaTests\bin\Debug\net5.0\nunit.engine.dll
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\RsaTests\bin\Debug\net5.0\nunit.engine.api.dll
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\RsaTests\bin\Debug\net5.0\nunit.engine.core.dll
-C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\RsaTests\bin\Debug\net5.0\Accord.dll.config
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\RsaTests\bin\Debug\net5.0\RsaTests.deps.json
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\RsaTests\bin\Debug\net5.0\RsaTests.runtimeconfig.json
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\RsaTests\bin\Debug\net5.0\RsaTests.runtimeconfig.dev.json

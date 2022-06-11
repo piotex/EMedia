@@ -35,7 +35,6 @@ namespace EMediaSol.Forms
             this.button_MakeAnonim = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_Encrypt = new System.Windows.Forms.Button();
-            this.decrypt_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,21 +98,11 @@ namespace EMediaSol.Forms
             this.button_Encrypt.UseVisualStyleBackColor = true;
             this.button_Encrypt.Click += new System.EventHandler(this.button_Encrypt_Click);
             // 
-            // decrypt_button
-            // 
-            this.decrypt_button.Location = new System.Drawing.Point(12, 314);
-            this.decrypt_button.Name = "decrypt_button";
-            this.decrypt_button.Size = new System.Drawing.Size(145, 47);
-            this.decrypt_button.TabIndex = 6;
-            this.decrypt_button.Text = "Odszyfruj (myRSA) obraz";
-            this.decrypt_button.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 450);
-            this.Controls.Add(this.decrypt_button);
             this.Controls.Add(this.button_Encrypt);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_MakeAnonim);
@@ -135,6 +124,5 @@ namespace EMediaSol.Forms
         private System.Windows.Forms.Button button_MakeAnonim;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button_Encrypt;
-        private System.Windows.Forms.Button decrypt_button;
     }
 }

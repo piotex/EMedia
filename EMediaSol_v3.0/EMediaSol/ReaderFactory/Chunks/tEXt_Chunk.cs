@@ -118,6 +118,29 @@ namespace EMediaSol.ReaderFactory.Chunks
             }
         }
 
+        public override void AppendChunkBytesToFile(string path)
+        {
+            if (!File.Exists(path))
+            {
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.Write("");
+                }
+            }
+            if (ChunkExist)
+            {
+                foreach (var item in ListOfTEXtChuks)
+                {
+                    byte[] bytes = item.GetByteChunk();
+                    using (var stream = new FileStream(path, FileMode.Append))
+                    {
+                        stream.Write(bytes, 0, bytes.Length);
+                    }
+                }
+            }
+        }
+
+
         public override string GetChunkAsString()
         {
             string text = "";

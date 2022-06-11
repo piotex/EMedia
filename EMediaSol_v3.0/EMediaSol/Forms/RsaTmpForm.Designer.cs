@@ -30,22 +30,46 @@ namespace EMediaSol.Forms
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button_enc = new System.Windows.Forms.Button();
+            this.button_dec = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Location = new System.Drawing.Point(124, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(776, 426);
+            this.textBox1.Size = new System.Drawing.Size(664, 426);
             this.textBox1.TabIndex = 0;
+            // 
+            // button_enc
+            // 
+            this.button_enc.Location = new System.Drawing.Point(12, 10);
+            this.button_enc.Name = "button_enc";
+            this.button_enc.Size = new System.Drawing.Size(106, 57);
+            this.button_enc.TabIndex = 1;
+            this.button_enc.Text = "Szyfruj";
+            this.button_enc.UseVisualStyleBackColor = true;
+            this.button_enc.Click += new System.EventHandler(this.button_enc_Click);
+            // 
+            // button_dec
+            // 
+            this.button_dec.Location = new System.Drawing.Point(12, 73);
+            this.button_dec.Name = "button_dec";
+            this.button_dec.Size = new System.Drawing.Size(106, 57);
+            this.button_dec.TabIndex = 2;
+            this.button_dec.Text = "Odszyfruj";
+            this.button_dec.UseVisualStyleBackColor = true;
+            this.button_dec.Click += new System.EventHandler(this.button_dec_Click);
             // 
             // RsaTmpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_dec);
+            this.Controls.Add(this.button_enc);
             this.Controls.Add(this.textBox1);
             this.Name = "RsaTmpForm";
             this.Text = "RsaTmpForm";
@@ -58,5 +82,7 @@ namespace EMediaSol.Forms
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button_enc;
+        private System.Windows.Forms.Button button_dec;
     }
 }

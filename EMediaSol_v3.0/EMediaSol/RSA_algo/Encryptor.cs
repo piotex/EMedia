@@ -17,5 +17,9 @@ namespace EMediaSol.RSA_algo
 
             return res.ToByteArray();
         }
+        public BigInteger Encrypt(BigInteger number, BigInteger e, BigInteger n)
+        {
+            return BigInteger.ModPow(number, e, n);
+        }
     }
 }

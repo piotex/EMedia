@@ -244,7 +244,6 @@ C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\ChunkTests\bin\De
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\ChunkTests\bin\Debug\net5.0\nunit.engine.api.dll
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\ChunkTests\bin\Debug\net5.0\nunit.engine.core.dll
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\ChunkTests\bin\Debug\net5.0\Microsoft.TestPlatform.PlatformAbstractions.dll
-C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\ChunkTests\bin\Debug\net5.0\Accord.dll.config
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\ChunkTests\bin\Debug\net5.0\ChunkTests.deps.json
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\ChunkTests\bin\Debug\net5.0\ChunkTests.runtimeconfig.json
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\ChunkTests\bin\Debug\net5.0\ChunkTests.runtimeconfig.dev.json

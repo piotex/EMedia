@@ -10,13 +10,21 @@ namespace EMediaSol.RSA_algo
 {
     public class RsaClient
     {
+        public byte[] Encrypt(byte[] number)
+        {
+            return new Encryptor().Encrypt(number, RsaNumbers.e, RsaNumbers.n);
+        }
         public BigInteger Encrypt(BigInteger number)
         {
-            return new BigInteger(new Encryptor().Encrypt(number.ToByteArray(), RsaNumbers.e, RsaNumbers.n));
+            return new Encryptor().Encrypt(number, RsaNumbers.e, RsaNumbers.n);
+        }
+        public byte[] Decrypt(byte[] number)
+        {
+            return new Decryptor().Decrypt(number, RsaNumbers.d, RsaNumbers.n);
         }
         public BigInteger Decrypt(BigInteger number)
         {
-            return new BigInteger(new Decryptor().Decrypt(number.ToByteArray(), RsaNumbers.d, RsaNumbers.n));
+            return new Decryptor().Decrypt(number, RsaNumbers.d, RsaNumbers.n);
         }
         /*
         public IDAT_Chunk EncryptIdata(IDAT_Chunk imputChunk)

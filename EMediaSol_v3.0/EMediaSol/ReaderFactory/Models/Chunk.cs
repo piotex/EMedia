@@ -48,7 +48,36 @@ namespace EMediaSol.ReaderFactory
             return res;
         }
 
+        public virtual byte[] GetByteChunk()
+        {
+            byte[] res = new byte[4 + 4 + Data.Length + 4];
+            int idx = 0;
+            var name = NameToByte();
+            var size = SizeToByte();
+            var crc = CRCToByte();
 
+            for (int i = 0; i < 4; i++)
+            {
+                res[idx] = size[i];
+                idx++;
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                res[idx] = name[i];
+                idx++;
+            }
+            for (int i = 0; i < Data.Length; i++)
+            {
+                res[idx] = Data[i];
+                idx++;
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                res[idx] = crc[i];
+                idx++;
+            }
+            return res;
+        }
 
     }
 }
