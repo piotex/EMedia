@@ -10,7 +10,7 @@ namespace EMediaSol.RSA_algo
 {
     public class RsaNumbers
     {
-        int bit_count = 3;
+        int bit_count = ConfigClass.TestBitCount;
         public BigInteger p;
         public BigInteger q;
         public BigInteger n;
@@ -46,18 +46,21 @@ namespace EMediaSol.RSA_algo
             }
             n = p * q;
             fi = (p-1)*(q-1);
+
+
             if (ConfigClass.IsTestVers){
                 e = new PrimeNumber().GenerateNBitPrimeNumber(bit_count);
             }
             else{
                 e = new PrimeNumber().ReadRandomPrimeNumber();
             }
-            if (e > fi){
-                throw new Exception("RsaNumbers() -> Generated to big: e");
-            }
             while (GCD(e, fi) != 1)
             {
                 e++;
+            }
+            if (e > fi)
+            {
+                throw new Exception("RsaNumbers() -> Generated to big: e");
             }
 
             BigInteger k = 1;

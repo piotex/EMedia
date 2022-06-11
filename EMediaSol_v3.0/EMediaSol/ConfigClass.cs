@@ -9,5 +9,6 @@ namespace EMediaSol
     public class ConfigClass
     {
         public static bool IsTestVers = true;
+        public static int TestBitCount = 3;
     }
 }
