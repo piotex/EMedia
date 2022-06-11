@@ -1,0 +1,35 @@
+#include <boost/multiprecision/miller_rabin.hpp>
+#include <boost/random/mersenne_twister.hpp>
+
+#include <fstream>
+
+using namespace boost::multiprecision;
+using namespace boost::random;
+
+namespace {
+    const int BIT_SIZE = 45;
+
+    cpp_int GetPrime() {
+        mt11213b base_gen(clock());
+        independent_bits_engine<mt11213b, BIT_SIZE, cpp_int> gen(base_gen);
+
+        // Generate some large random primes
+        // Note 25 trials of Miller-Rabin
+        // likelihood that number is prime
+        cpp_int n;
+        do {
+            n = gen();
+        } while (!miller_rabin_test(n, 25));
+        return n;
+    }
+} // namespace
+
+int main() {
+    // Generate a secret RSA-like 512 bits primes p
+    auto prime = GetPrime();
+
+    std::ofstream fileHandler;
+    fileHandler.open("prime_number_file");
+    fileHandler << prime.str() << std::endl;
+    fileHandler.close();
+}

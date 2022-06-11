@@ -1,0 +1,98 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\EMedia\\EMediaSol_v3.0\\ChunkTests\\ChunkTests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\EMedia\\EMediaSol_v3.0\\ChunkTests\\ChunkTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\EMedia\\EMediaSol_v3.0\\ChunkTests\\ChunkTests.csproj",
+        "projectName": "ChunkTests",
+        "projectPath": "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\EMedia\\EMediaSol_v3.0\\ChunkTests\\ChunkTests.csproj",
+        "packagesPath": "C:\\Users\\pkubo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\EMedia\\EMediaSol_v3.0\\ChunkTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pkubo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\EMedia\\EMediaSol_v3.0\\EMediaSol\\EMediaSol.csproj": {
+                "projectPath": "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\EMedia\\EMediaSol_v3.0\\EMediaSol\\EMediaSol.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.9.4, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.1, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.17.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.7.3, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\EMedia\\EMediaSol_v3.0\\EMediaSol\\EMediaSol.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\EMedia\\EMediaSol_v3.0\\EMediaSol\\EMediaSol.csproj",
+        "projectName": "EMediaSol",
+        "projectPath": "C:\\Users\\pkubo\\OneDrive\\Dokumenty\\GitHub\\EMedia\\EMediaSol_v3.0\\EMediaSol\\EMediaSol.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    }
+  }
+}
