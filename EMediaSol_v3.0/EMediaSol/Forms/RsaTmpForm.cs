@@ -1,4 +1,6 @@
-﻿using EMediaSol.RSA_algo;
+﻿using EMediaSol.ReaderFactory;
+using EMediaSol.ReaderFactory.Chunks;
+using EMediaSol.RSA_algo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,12 +23,47 @@ namespace EMediaSol.Forms
 
         private void RsaTmpForm_Load(object sender, EventArgs e)
         {
-            RsaNumbers rsa = new RsaNumbers();
-            rsa = rsa.GetNewObj();
+            /*
+            RsaNumbers.p = 2;
+            RsaNumbers.q = 7;
+            RsaNumbers.fi= 6;
+            RsaNumbers.n = 14;
+            RsaNumbers.d = 11;
+            RsaNumbers.e = 5;
 
-            textBox1.Text = "d: " + rsa.d + "\r\n";
-            textBox1.Text +="e: " + rsa.e + "\r\n";
+            textBox1.Text =  "p: " + RsaNumbers.p + "\r\n";
+            textBox1.Text += "q: " + RsaNumbers.q + "\r\n";
+            textBox1.Text += "fi: "+ RsaNumbers.fi +"\r\n";
+            textBox1.Text += "----n: " + RsaNumbers.n + "\r\n";
+            textBox1.Text += "----d: " + RsaNumbers.d + "\r\n";
+            textBox1.Text += "----e: " + RsaNumbers.e + "\r\n";
+            textBox1.Text += "--------------------------------------\r\n";
+            */
 
+            //Bitmap img = (Bitmap)EMediaSol.Forms.MainForm._pictureBox1.Image;
+
+            if (ConfigClass.pathToFile == "")
+            {
+                MessageBox.Show("Nie podano ścierzki do pliku");
+                return;
+            }
+
+            byte[] inputArray = new PngBitReader().ReadPngFile(ConfigClass.pathToFile);
+            IDAT_Chunk idat = new IDAT_Chunk(inputArray);
+            Chunk chunk = idat.ListOfIdatChuks[0];
+
+            RsaClient client = new RsaClient();
+            for (int i = 1; i < 10; i++)
+            {
+                var enc = client.Encrypt(i);
+                var dec = client.Decrypt(enc);
+
+
+                textBox1.Text += "i: "   + i + "\r\n";
+                textBox1.Text +="enc: " + enc + "\r\n";
+                textBox1.Text +="dec: " + dec + "\r\n";
+                textBox1.Text +="--------------------------------------\r\n";
+            }
 
 
 

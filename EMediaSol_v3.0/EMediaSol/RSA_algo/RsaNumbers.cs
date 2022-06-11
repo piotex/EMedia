@@ -8,24 +8,31 @@ using System.Threading.Tasks;
 
 namespace EMediaSol.RSA_algo
 {
-    public class RsaNumbers
+    public sealed class RsaNumbers
     {
-        int bit_count = ConfigClass.TestBitCount;
-        public BigInteger p;
-        public BigInteger q;
-        public BigInteger n;
-        public BigInteger fi;
-        public BigInteger e;
-        public BigInteger d;
+        static int bit_count = ConfigClass.TestBitCount;
+        public static BigInteger p;
+        public static BigInteger q;
+        public static BigInteger n;
+        public static BigInteger fi;
+        public static BigInteger e;
+        public static BigInteger d;
 
+        private RsaNumbers() { }
 
-        public RsaNumbers()
+        private static RsaNumbers _instance;
+
+        public static RsaNumbers GetInstance()
         {
-            //_init();
+            if (_instance == null)
+            {
+                _init_();
+                _instance = new RsaNumbers();
+            }
+            return _instance;
         }
 
-
-        public RsaNumbers GetNewObj()
+        public static void _init_()
         {
             if (ConfigClass.IsTestVers){
                 p = new PrimeNumber().GenerateNBitPrimeNumber(bit_count);
@@ -54,7 +61,7 @@ namespace EMediaSol.RSA_algo
             else{
                 e = new PrimeNumber().ReadRandomPrimeNumber();
             }
-            while (GCD(e, fi) != 1)
+            while (BigInteger.GreatestCommonDivisor(e, fi) != 1)
             {
                 e++;
             }
@@ -76,19 +83,6 @@ namespace EMediaSol.RSA_algo
                 d++;
             }
             */
-            return this;
-        }
-
-        private BigInteger GCD(BigInteger a, BigInteger b)
-        {
-            while (a != 0 && b != 0)
-            {
-                if (a > b)
-                    a %= b;
-                else
-                    b %= a;
-            }
-            return a | b;
         }
 
     }

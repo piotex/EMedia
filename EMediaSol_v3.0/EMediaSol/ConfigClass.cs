@@ -10,5 +10,6 @@ namespace EMediaSol
     {
         public static bool IsTestVers = true;
         public static int TestBitCount = 3;
+        public static string pathToFile = "";
     }
 }

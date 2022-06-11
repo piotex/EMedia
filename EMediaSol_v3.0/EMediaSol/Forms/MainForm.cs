@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EMediaSol.RSA_algo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,7 @@ namespace EMediaSol.Forms
             InitializeComponent();
 
             _pictureBox1 = pictureBox1;
+            RsaNumbers rsa = RsaNumbers.GetInstance();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -37,6 +39,7 @@ namespace EMediaSol.Forms
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     FilePath = openFileDialog.FileName;
+                    ConfigClass.pathToFile = FilePath;
                     Bitmap bmp = new Bitmap(FilePath);
                     pictureBox1.Image = bmp;
                     pictureBox1.Size = bmp.Size;
