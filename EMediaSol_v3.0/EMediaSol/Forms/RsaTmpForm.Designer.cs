@@ -32,6 +32,8 @@ namespace EMediaSol.Forms
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button_enc = new System.Windows.Forms.Button();
             this.button_dec = new System.Windows.Forms.Button();
+            this.button_enc_CTR = new System.Windows.Forms.Button();
+            this.button_dec_CTR = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -49,7 +51,7 @@ namespace EMediaSol.Forms
             this.button_enc.Name = "button_enc";
             this.button_enc.Size = new System.Drawing.Size(106, 57);
             this.button_enc.TabIndex = 1;
-            this.button_enc.Text = "Szyfruj";
+            this.button_enc.Text = "Szyfruj ECB";
             this.button_enc.UseVisualStyleBackColor = true;
             this.button_enc.Click += new System.EventHandler(this.button_enc_Click);
             // 
@@ -59,15 +61,37 @@ namespace EMediaSol.Forms
             this.button_dec.Name = "button_dec";
             this.button_dec.Size = new System.Drawing.Size(106, 57);
             this.button_dec.TabIndex = 2;
-            this.button_dec.Text = "Odszyfruj";
+            this.button_dec.Text = "Odszyfruj ECB";
             this.button_dec.UseVisualStyleBackColor = true;
             this.button_dec.Click += new System.EventHandler(this.button_dec_Click);
+            // 
+            // button_enc_CTR
+            // 
+            this.button_enc_CTR.Location = new System.Drawing.Point(12, 163);
+            this.button_enc_CTR.Name = "button_enc_CTR";
+            this.button_enc_CTR.Size = new System.Drawing.Size(106, 57);
+            this.button_enc_CTR.TabIndex = 3;
+            this.button_enc_CTR.Text = "Szyfruj CTR";
+            this.button_enc_CTR.UseVisualStyleBackColor = true;
+            this.button_enc_CTR.Click += new System.EventHandler(this.button_enc_CTR_Click);
+            // 
+            // button_dec_CTR
+            // 
+            this.button_dec_CTR.Location = new System.Drawing.Point(12, 226);
+            this.button_dec_CTR.Name = "button_dec_CTR";
+            this.button_dec_CTR.Size = new System.Drawing.Size(106, 57);
+            this.button_dec_CTR.TabIndex = 4;
+            this.button_dec_CTR.Text = "Odszyfruj  CTR";
+            this.button_dec_CTR.UseVisualStyleBackColor = true;
+            this.button_dec_CTR.Click += new System.EventHandler(this.button_dec_CTR_Click);
             // 
             // RsaTmpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_dec_CTR);
+            this.Controls.Add(this.button_enc_CTR);
             this.Controls.Add(this.button_dec);
             this.Controls.Add(this.button_enc);
             this.Controls.Add(this.textBox1);
@@ -84,5 +108,7 @@ namespace EMediaSol.Forms
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button_enc;
         private System.Windows.Forms.Button button_dec;
+        private System.Windows.Forms.Button button_enc_CTR;
+        private System.Windows.Forms.Button button_dec_CTR;
     }
 }
