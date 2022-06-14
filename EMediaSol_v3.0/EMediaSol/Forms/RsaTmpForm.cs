@@ -1,16 +1,9 @@
 ﻿using EMediaSol.ReaderFactory;
-using EMediaSol.ReaderFactory.Chunks;
 using EMediaSol.RSA_algo;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EMediaSol.Forms
@@ -423,6 +416,12 @@ namespace EMediaSol.Forms
             string dest_path = ConfigClass.pathToFile + "_dec_ctr.png";
             PNG_Model.SaveModel(dest_path);
             MessageBox.Show("[dec] Poprawnie odszyfrowano plik do ścierzki: " + dest_path);
+        }
+
+        private void button_showcase_Click(object sender, EventArgs e)
+        {
+            RsaShowcseForm tmp = new RsaShowcseForm();
+            tmp.Show();
         }
     }
 }

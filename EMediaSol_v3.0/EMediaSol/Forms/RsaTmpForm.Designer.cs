@@ -34,6 +34,7 @@ namespace EMediaSol.Forms
             this.button_dec = new System.Windows.Forms.Button();
             this.button_enc_CTR = new System.Windows.Forms.Button();
             this.button_dec_CTR = new System.Windows.Forms.Button();
+            this.button_showcase = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -85,11 +86,22 @@ namespace EMediaSol.Forms
             this.button_dec_CTR.UseVisualStyleBackColor = true;
             this.button_dec_CTR.Click += new System.EventHandler(this.button_dec_CTR_Click);
             // 
+            // button_showcase
+            // 
+            this.button_showcase.Location = new System.Drawing.Point(12, 381);
+            this.button_showcase.Name = "button_showcase";
+            this.button_showcase.Size = new System.Drawing.Size(106, 57);
+            this.button_showcase.TabIndex = 5;
+            this.button_showcase.Text = "Showcase";
+            this.button_showcase.UseVisualStyleBackColor = true;
+            this.button_showcase.Click += new System.EventHandler(this.button_showcase_Click);
+            // 
             // RsaTmpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_showcase);
             this.Controls.Add(this.button_dec_CTR);
             this.Controls.Add(this.button_enc_CTR);
             this.Controls.Add(this.button_dec);
@@ -110,5 +122,6 @@ namespace EMediaSol.Forms
         private System.Windows.Forms.Button button_dec;
         private System.Windows.Forms.Button button_enc_CTR;
         private System.Windows.Forms.Button button_dec_CTR;
+        private System.Windows.Forms.Button button_showcase;
     }
 }
