@@ -52,8 +52,7 @@ namespace EMediaSol.ReaderFactory.Chunks
                 }
                 model.Data = body;
 
-                tmp = getNextFourBytes(ref tab, ref index);
-                model.CRC = ConvertByteArrayToString(tmp);
+                model.CRC = getNextFourBytes(ref tab, ref index);
                 ListOfIdatChuks.Add(model);
             }
         }

@@ -88,3 +88,5 @@ C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\EMediaSol\bin\Deb
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\EMediaSol\bin\Debug\System.ValueTuple.xml
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\EMediaSol\obj\Debug\EMediaSol.csproj.CopyComplete
 C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\EMediaSol\obj\Debug\EMediaSol.Forms.RsaTmpForm.resources
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\EMediaSol\bin\Debug\Crc32.NET.dll
+C:\Users\pkubo\OneDrive\Dokumenty\GitHub\EMedia\EMediaSol_v3.0\EMediaSol\bin\Debug\Crc32.NET.xml

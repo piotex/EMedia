@@ -124,6 +124,8 @@ namespace EMediaSol.Forms
             PNG_Model PNG_Model = new PNG_Model(ConfigClass.pathToFile);
             Chunk chunk = PNG_Model._IDAT_Chunk.ListOfIdatChuks[0];                                                  ///!!!!!!!!!!!!!! może ich być więcej - poprawić
 
+            //chunk.CalcCRC();
+
             Chunk encrypted = chunk;
             List<byte> enc_bytes_list = GetEncodedBytes(chunk);
             encrypted.Size = enc_bytes_list.Count();

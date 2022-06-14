@@ -45,8 +45,7 @@ namespace EMediaSol.ReaderFactory
 
                 index += model.Size;                                //pominiecie danych w chunku
 
-                tmp = getNextFourBytes(ref tab, ref index);
-                model.CRC = ConvertByteArrayToString(tmp);
+                model.CRC = getNextFourBytes(ref tab, ref index);
                 result.Add(model);
             }
             return result;

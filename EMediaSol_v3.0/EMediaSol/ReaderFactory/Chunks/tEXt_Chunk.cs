@@ -70,8 +70,7 @@ namespace EMediaSol.ReaderFactory.Chunks
                 model.Keyword = keyword;
                 model.Text = text;
 
-                tmp = getNextFourBytes(ref tab, ref index);
-                model.CRC = ConvertByteArrayToString(tmp);
+                model.CRC = getNextFourBytes(ref tab, ref index);
 
                 ListOfTEXtChuks.Add(model);
             }

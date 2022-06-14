@@ -91,8 +91,7 @@ namespace EMediaSol.ReaderFactory.Chunks
                 }
 
 
-                tmp = getNextFourBytes(ref tab, ref index);
-                model.CRC = ConvertByteArrayToString(tmp);
+                model.CRC = getNextFourBytes(ref tab, ref index);
 
                 ListOfITXtChuks.Add(model);
             }

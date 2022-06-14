@@ -57,8 +57,7 @@ namespace EMediaSol.ReaderFactory
 
             index += Size;
 
-            tmp = getNextFourBytes(ref tab, ref index);
-            CRC = ConvertByteArrayToString(tmp);
+            CRC = getNextFourBytes(ref tab, ref index);
         }
         /// <summary>
         /// 

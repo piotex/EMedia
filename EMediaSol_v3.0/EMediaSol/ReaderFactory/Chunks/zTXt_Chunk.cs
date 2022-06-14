@@ -82,8 +82,7 @@ namespace EMediaSol.ReaderFactory.Chunks
 
                 model.DecompressedText = SharpZipLibDecompress(tmp_arr);
 
-                tmp = getNextFourBytes(ref tab, ref index);
-                model.CRC = ConvertByteArrayToString(tmp);
+                model.CRC = getNextFourBytes(ref tab, ref index);
 
                 ListOfTEXtChuks.Add(model);
             }
