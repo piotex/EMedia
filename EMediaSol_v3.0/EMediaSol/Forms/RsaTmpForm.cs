@@ -114,8 +114,8 @@ namespace EMediaSol.Forms
             for (int i = 0; i < data.Count; i++)
             {
                 BigInteger numb = new BigInteger(data[i]);
-                var dec2 = client.Decrypt(numb);
-                var data2 = dec2.ToByteArray();
+                BigInteger dec2 = client.Decrypt(numb);
+                byte[] data2 = dec2.ToByteArray();
 
                 for (int j = 0; j < mod_div; j++)
                 {
@@ -206,16 +206,89 @@ namespace EMediaSol.Forms
         }
         public List<byte> GetDecodedCounterXorChunk(Chunk chunk)
         {
-            int mod_div = ConfigClass.RsaDataPackageSize_Orig - 1;                                       //jest -1 żeby ostatni bit wynosił 0 - przez co liczba jest dodatnia
+            int mod_div = ConfigClass.RsaDataPackageSize_Enco - 1;                                       //jest -1 żeby ostatni bit wynosił 0 - przez co liczba jest dodatnia
             //int mod_div = ConfigClass.RsaDataPackageSize_Orig;                                       //jest -1 żeby ostatni bit wynosił 0 - przez co liczba jest dodatnia
 
             RsaClient client = new RsaClient();
             List<byte> dec_bytes_list = new List<byte>();
-            List<byte[]> data = GetChunkBytePortions_dec(chunk);
+            List<byte[]> data_chunk = GetChunkBytePortions_dec(chunk);
 
-            for (int i = 0; i < data.Count; i++)
+            for (int i = 0; i < data_chunk.Count; i++)
             {
+                byte[] counterNonce = GetCounterNonce();
+                IncrementCounter();
+
+                byte[] enc2 = client.Encrypt(counterNonce);
+                if (ConfigClass.IsTestVers)
+                {
+                    byte[] dec22 = client.Decrypt(enc2);
+                    BigInteger b1 = new BigInteger(dec22);
+                    BigInteger b2 = new BigInteger(counterNonce);
+                    if (b1 != b2)
+                    {
+                        throw new Exception("RsaTmpForm -> Błąd w szyfrowaniu/deszyfrowaniu");
+                    }
+                }
+                byte[] encoded_conterNounce = new byte[ConfigClass.RsaDataPackageSize_Enco];
+                for (int j = 0; j < ConfigClass.RsaDataPackageSize_Enco; j++)       //tutaj robimy paczkę zawierjącą ConfigClass.RsaDataPackageSize_Enco bajtów - kopiujemy data2 i potem uzupełniamy zerami
+                {
+                    byte m_byte = 0;
+                    if (enc2.Length > j)
+                    {
+                        m_byte = enc2[j];
+                    }
+                    encoded_conterNounce[j] = m_byte;
+                }
+                if (encoded_conterNounce.Length != data_chunk[i].Length)
+                {
+                    throw new Exception("GetEncodedCounterXorChunk() - złe długości arg do xorowania");
+                }
+
+
+                //robimy xora na kawalku zaszyfrowanej idaty oraz zaszyfrowanym kluczu
+                byte[] xorRes = new byte[encoded_conterNounce.Length];
+                for (int j = 0; j < xorRes.Length; j++)
+                {
+                    xorRes[j] = (byte)(encoded_conterNounce[j] ^ data_chunk[i][j]);
+                }
+
+                //sprawdzenie mozliwosci odszyfrowania
+                byte[] decoded_res = new byte[encoded_conterNounce.Length];
+                for (int j = 0; j < xorRes.Length; j++)
+                {
+                    decoded_res[j] = (byte)(encoded_conterNounce[j] ^ xorRes[j]);
+                }
+                BigInteger b11 = new BigInteger(decoded_res);
+                BigInteger b22 = new BigInteger(data_chunk[i]);
+                if (b11 != b22)
+                {
+                    throw new Exception("xxx - błąd w odszyfrowywaniu  xora");
+                }
+
+                if (i == data_chunk.Count-1)
+                {
+                    int sa = 9;
+                }
+
+                for (int j = 0; j < mod_div; j++)
+                {
+                    dec_bytes_list.Add(xorRes[j]);
+                }
+
+                /*
                 BigInteger numb = new BigInteger(data[i]);
+
+
+
+
+
+
+
+
+
+
+
+
                 var dec2 = client.Decrypt(numb);
                 var data2 = dec2.ToByteArray();
 
@@ -228,6 +301,7 @@ namespace EMediaSol.Forms
                     }
                     dec_bytes_list.Add(m_byte);
                 }
+                */
             }
             return dec_bytes_list;
         }
@@ -327,6 +401,11 @@ namespace EMediaSol.Forms
 
         private void button_dec_CTR_Click(object sender, EventArgs e)
         {
+            if (GetCounterNonce().Length != ConfigClass.RsaDataPackageSize_Orig)
+            {
+                throw new Exception("button_enc_CTR_Click - błędna wielkość GetCounterNonce()");
+            }
+            Counter_CTR = 0;
             PNG_Model PNG_Model = new PNG_Model(ConfigClass.pathToFile);
             for (int i = 0; i < PNG_Model._IDAT_Chunk.ListOfIdatChuks.Count; i++)
             {
@@ -341,7 +420,7 @@ namespace EMediaSol.Forms
                 PNG_Model._IDAT_Chunk.ListOfIdatChuks[i] = decrypted;
             }
 
-            string dest_path = ConfigClass.pathToFile + "_dec.png";
+            string dest_path = ConfigClass.pathToFile + "_dec_ctr.png";
             PNG_Model.SaveModel(dest_path);
             MessageBox.Show("[dec] Poprawnie odszyfrowano plik do ścierzki: " + dest_path);
         }
